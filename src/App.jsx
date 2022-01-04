@@ -2,6 +2,7 @@ import React from "react";
 import Card from "./components/Card";
 import beers from "./data/beers";
 import styles from "./App.module.scss";
+import SearchBox from "./components/SearchBox/SearchBox";
 import NavBar from "./components/NavBar/NavBar.jsx";
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
   return (
     <>
       <div className={styles.App}>{beers.map(getCardFrontJSX)}</div>
-      <section className={styles.nav}>
+      <section className={styles.NavBar}>
         <NavBar />;
       </section>
       ;
