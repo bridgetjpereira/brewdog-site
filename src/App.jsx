@@ -1,6 +1,13 @@
 import React from "react";
-import styles from "./App.module.scss";
-import NavBar from "./NavBar.jsx";
-import Main from "./Main.jsx";
+import Card from "./components/Card";
+import beers from "./data/beers";
+
+const App = () => {
+  return (
+    <div>
+      <Card beer={beers[2]} />
+    </div>
+  );
+};
 
 export default App;
