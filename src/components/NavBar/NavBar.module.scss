@@ -1,8 +1,15 @@
-@import "../../../variables.scss";
+@import "../../variables.scss";
 
-.NavBar {
-  max-height: 100%;
-  max-width: 40%;
-  border: solid 2px red;
-  background-color: pink;
+.nav {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  float: left;
+  height: 100vh;
+  max-width: 30%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+  border: solid 2px pink;
+  backface-visibility: hidden;
+  background-color: white;
+  margin: 20px;
 }
