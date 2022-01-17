@@ -1,11 +1,16 @@
 import React from "react";
 import styles from "./NavBar.module.scss";
 import SearchBar from "../SearchBar";
+import FilterList from "../FilterList";
+import FilterItem from "../FilterItem/FilterItem";
 import { Link } from "@reach/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import filters from "../../data/filters";
 
 const Navbar = (props) => {
   const { searchText, setSearchText } = props;
+  const { isClicked, setIsClicked } = props;
+  const { filterName } = props;
   return (
     <div className={styles.nav}>
       <Link to="/">
@@ -21,6 +26,15 @@ const Navbar = (props) => {
           searchText={searchText}
           setSearchText={setSearchText}
         />
+        <section className={styles.FilterList}>
+          <FilterList
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
+          />
+        </section>
+        {/* <section className={styles.FilterItem}>
+        <FilterItem />
+      </section> */}
       </div>
     </div>
   );

@@ -2,17 +2,21 @@ import React, { useState } from "react";
 import { Router, Link } from "@reach/router";
 import Card from "./components/Card";
 
-import styles from "./App.module.scss"
+import styles from "./App.module.scss";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Main from "./components/Main/Main.jsx";
 import Routes from "./containers/Routes";
 import NotFound from "./components/NotFound/NotFound.jsx";
+import FilterList from "./components/FilterList";
 
 import library from "./data/fa-library";
 import beers from "./data/beers";
+import filters from "./data/filters";
 
 const App = () => {
   const [searchText, setSearchText] = useState("");
+  const [isClicked, setIsClicked] = useState("");
+  
   return (
     <>
       <section className={styles.nav}>
