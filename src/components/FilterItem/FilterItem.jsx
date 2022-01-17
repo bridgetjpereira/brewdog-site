@@ -1,31 +1,19 @@
 import React, { useState } from "react";
+import beers from "../../data/beers";
 import styles from "./FilterItem.module.scss";
+import Checkbox from "../Checkbox/Checkbox";
 
 const FilterItem = (props) => {
-  const [isClicked, setIsClicked] = useState(false);
-  const { filterItem } = props;
-  //   const {isClicked, setIsClicked } = props;
+  const { filterItem, setFilters } = props;
 
-  const input = isClicked ? (
-    <input
-      type="checkbox"
-      value={isClicked}
-      onClick={(e) => setIsClicked(e.target.value)}
-    />
-  ) : (
-    <input
-      type="checkbox"
-      value={isClicked}
-      onClick={(e) => setIsClicked(e.target.value)}
-    />
-  );
+  //   const {isClicked, setIsClicked } = props;
 
   return (
     <>
       <li className={styles.filterItem}>
         <ul>{filterItem.name}</ul>
         <ul>{filterItem.value}</ul>
-        {input}
+        <Checkbox filterItem={filterItem} setFilters={setFilters} />
       </li>
     </>
   );

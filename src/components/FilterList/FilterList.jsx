@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import styles from "./FilterList.module.scss";
 import Navbar from "../NavBar/NavBar";
 import FilterItem from "../FilterItem/FilterItem";
-import filters from "../../data/filters";
 
 const FilterList = (props) => {
-  const { isClicked, setIsClicked } = props;
+  const { filters, setFilters } = props;
 
   const getFilterItemJsx = (filterItem) => (
     <div className={styles.FilterList} key={filterItem.id}>
-      <FilterItem filterItem={filterItem} />
+      <FilterItem filterItem={filterItem} setFilters={setFilters}/>
     </div>
   );
 

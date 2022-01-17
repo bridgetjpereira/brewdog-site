@@ -11,16 +11,21 @@ import FilterList from "./components/FilterList";
 
 import library from "./data/fa-library";
 import beers from "./data/beers";
-import filters from "./data/filters";
+import filterSet from "./data/filters";
 
 const App = () => {
   const [searchText, setSearchText] = useState("");
-  const [isClicked, setIsClicked] = useState("");
-  
+  const [filters, setFilters] = useState(filterSet);
+
   return (
     <>
       <section className={styles.nav}>
-        <NavBar searchText={searchText} setSearchText={setSearchText} />
+        <NavBar
+          searchText={searchText}
+          setSearchText={setSearchText}
+          filters={filters}
+          setFilters={setFilters}
+        />
       </section>
       {/* <section>
         <Main beers={beers} />

@@ -8,8 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import filters from "../../data/filters";
 
 const Navbar = (props) => {
-  const { searchText, setSearchText } = props;
-  const { isClicked, setIsClicked } = props;
+  const { searchText, setSearchText, filters, setFilters } = props;
   const { filterName } = props;
   return (
     <div className={styles.nav}>
@@ -27,10 +26,7 @@ const Navbar = (props) => {
           setSearchText={setSearchText}
         />
         <section className={styles.FilterList}>
-          <FilterList
-            isClicked={isClicked}
-            setIsClicked={setIsClicked}
-          />
+          <FilterList filters={filters} setFilters={setFilters} />
         </section>
         {/* <section className={styles.FilterItem}>
         <FilterItem />
