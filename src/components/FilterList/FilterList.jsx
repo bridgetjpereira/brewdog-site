@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./FilterList.module.scss";
 import Navbar from "../NavBar/NavBar";
 import FilterItem from "../FilterItem/FilterItem";
+import Checkbox from "../Checkbox/Checkbox";
 
 const FilterList = (props) => {
   const { filters, setFilters } = props;
@@ -9,6 +10,7 @@ const FilterList = (props) => {
   const getFilterItemJsx = (filterItem) => (
     <div className={styles.FilterList} key={filterItem.id}>
       <FilterItem filterItem={filterItem} setFilters={setFilters}/>
+      {/* <Checkbox/> */}
     </div>
   );
 

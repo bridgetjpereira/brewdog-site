@@ -1,4 +1,13 @@
-.search {
+.searchBar {
   max-height: 100%;
   max-width: 40%;
+  list-style: none;
+  $tertiary-color: rgb(141, 140, 140);
+  font-size: 1.5em;
+  color: rgb(9, 194, 194);
+}
+
+input {
+  color: rgb(9, 194, 194);
+  border: solid 2px rgb(9, 194, 194);
 }

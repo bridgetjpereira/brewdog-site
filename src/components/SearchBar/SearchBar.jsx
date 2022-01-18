@@ -16,8 +16,8 @@ const SearchBar = (props) => {
   ) : null;
 
   return (
-    <div className={styles.search}>
-      Searchbar...
+    <div className={styles.searchBar}>
+      Searchbar
       {input}
       <span className={styles.fa} onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon="search" />

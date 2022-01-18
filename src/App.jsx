@@ -40,4 +40,20 @@ const App = () => {
   );
 };
 
+
+// import React from "react";
+// import background from "./img/placeholder.png";
+
+// function App() {
+//   return (
+//     <div style={{ backgroundImage: `url(${background})` }}>
+//       Hello World
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// https://www.freepik.com/free-vector/abstract-grunge-texture-with-halftone-effect_16738381.htm#query=background&position=15&from_view=keyword
+
 export default App;

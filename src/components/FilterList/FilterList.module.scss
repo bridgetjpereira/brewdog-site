@@ -1,6 +1,16 @@
 @import "../../variables.scss";
+// <a href='https://www.freepik.com/vectors/background'>Background vector created by vector_corp - www.freepik.com</a>
 
-.filterContainer {
-  border: solid 2px blue;
-  height: 500px;
+// .filterContainer {
+//   border: solid 2px blue;
+//   height: 500px;
+// }
+
+.FilterList {
+  list-style: none;
+  // font-size: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  padding-top: 10px;
+  color: rgb(9, 194, 194);
 }

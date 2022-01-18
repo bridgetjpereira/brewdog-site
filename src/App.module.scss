@@ -1,13 +1,13 @@
 @import "./variables.scss";
 
-.App {
-  display: flex;
-  flex-direction: column;
-}
+// .App {
+//   // display: flex;
+//   // flex-direction: row;
+// }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  grid-auto-rows: repeat(3, 1fr);
-}
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   gap: 10px;
+//   grid-auto-rows: repeat(3, 1fr);
+// }

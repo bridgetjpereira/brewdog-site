@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Checkbox.module.scss";
 
 const Checkbox = (props) => {
   const { filterItem, setFilters } = props;
@@ -8,12 +9,14 @@ const Checkbox = (props) => {
 
   return (
     <>
-      <input
-        type="checkbox"
-        value={isChecked}
-        onChange={() => setFilters((isChecked) => !isChecked)}
-      />
-      {filterItem.checked ? "checked" : "not checked"}
+      <div className={styles.Checkbox}>
+        <input
+          type="checkbox"
+          value={isChecked}
+          onChange={() => setFilters((isChecked) => !isChecked)}
+        />
+        {filterItem.checked ? "I've been ticked!" : ""}
+      </div>
     </>
   );
 };
