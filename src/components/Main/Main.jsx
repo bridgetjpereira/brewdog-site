@@ -9,35 +9,45 @@ import Filters from "../../data/beers";
 // const getCardListJSX = (beer) => <CardList beer={beer} key={beer.id}
 
 const Main = (props) => {
-  const { searchText, isClicked } = props;
-
-  // const getHighAlcohol = beers.filter((beer) => {
-  //   const highAlcohol = beer.abv > 6;
-  //   return highAlcohol.includes(isClicked);
-  // });
-
-  // const getHighAcidity = beers.filter((beer) => {
-  //   const highAcidity = beer.ph < 4;
-  //   return highAcidity.includes(isClicked);
-  // });
-
-  // const getClassicRange = beers.filter((beer) => {
-  //   const classicRange = beer.first_brewed < 2010;
-  //   return classicRange.includes(isClicked);
-  // });
-
+  const { searchText, checked } = props;
 
   
 
   const matchingBeers = beers.filter((beer) => {
     const beerName = beer.name.toLowerCase();
 
-    // const classicRange = beer.first_brewed < 2010;
-    // const highAcidity = beer.ph < 4;
-    // const highAlcohol = beer.abv > 6;
+
+  const getHighAlcohol = beers.filter((beer) => {
+    const highAlcohol = beer.abv.key > 6;
+    return highAlcohol.includes(checked);
+  });
+
+  const getClassicRange = beers.filter((beer) => {
+    const classicRange = beer.first_brewed.key < 2010;
+    return classicRange.includes(checked);
+  });
 
 
-    return beerName.includes(searchText.toLowerCase()&& isClicked);
+  const getHighAcidity = beers.filter((beer) => {
+    const highAcidity = beer.ph.key < 4;
+    return highAcidity.includes(checked);
+  });
+
+
+    const getHighAlcohol = beers.filter((beer) => {
+    if (beerName.includes(searchText.toLowerCase()&& this.checked === highAlcohol);
+    return (getHighAlcohol);
+    if (beerName.includes(searchText.toLowerCase()&& this.checked === highAcidity);
+    return (getHighAcidity);
+    if (beerName.includes(searchText.toLowerCase()&& this.checked === classicRange)
+    return getClassicRange;
+    if (beerName.includes(searchText.toLowerCase()&& this === !checked)
+    return (matchingBeers)
+    else return 
+    <FeedbackPanel
+    header="No Matches"
+    text="None of our beers match that search"
+  />
   });
 
   const contentJSX = matchingBeers.length ? (

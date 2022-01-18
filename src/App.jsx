@@ -16,6 +16,7 @@ import filterSet from "./data/filters";
 const App = () => {
   const [searchText, setSearchText] = useState("");
   const [filters, setFilters] = useState(filterSet);
+  const [checked, setChecked] = useState(false);
 
   return (
     <>
@@ -25,13 +26,14 @@ const App = () => {
           setSearchText={setSearchText}
           filters={filters}
           setFilters={setFilters}
+          checked= {checked}
         />
       </section>
       {/* <section>
         <Main beers={beers} />
       </section> */}
       <section className={styles.content}>
-        <Routes searchText={searchText} />
+        <Routes searchText={searchText} checked= {checked} />
       </section>
     </>
   );
