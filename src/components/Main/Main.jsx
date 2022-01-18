@@ -3,67 +3,135 @@ import styles from "./Main.module.scss";
 import CardList from "../CardList";
 import beers from "../../data/beers";
 import FeedbackPanel from "../../components/FeedbackPanel";
-import Filters from "../../data/beers";
-
-// {beers.map(getCardListJSX)}/>;\
-// const getCardListJSX = (beer) => <CardList beer={beer} key={beer.id}
+import Filters from "../../data/filters.js";
 
 const Main = (props) => {
   const { searchText, checked } = props;
 
-  
+  // const checkHighAlcohol = (beerList) => (
+  //   // check if high alcohol is ticked
+  //   const highAlcohol = beer.abv.key > 6;
+  //   //  if  highAlcohol.includes(checked);
+  //   // if ticked - filter and return
+  //   // if not return original array
+  // );
+
+//let beerCheck1 = checkHighAlochol(beers)
+//let beerCheck2 = checkClassicRange(beerCheck1)
+
+  // const checkHighAlcohol = (beerList) => {
+  //   const highAlcohol = beer.abv.key > 6;
+  //   highAlcohol.includes(checked)
+  //     ? (highAlcoholBeerList = beerList.filter(highAlcohol))
+  //     : beerList;
+  // };
+
+  // const checkClassicRange = (beer) => {
+  //   const classicRange = beer.first_brewed.key < 2010;
+  //   classicRange.includes(checked)
+  //     ? (classicRangeBeerList = beers.filter(classicRange))
+  //     : beers;
+  // };
+
+  // const checkHighAcidity = (beer) => {
+  //   const highAcidity = beer.ph.key < 4;
+  //   highAcidity.includes(checked)
+  //     ? highAcidityBeersList = beers.filter(highAcidity) 
+  //     : beers;
+  //   // check if high acidity is ticked
+  //   // if ticked - filter and return
+  //   // if not return original array
+  // };
+
+  // //  const matchingBeers = beers.filter((beer) => {
+  // //   //check filters then proceed to filter below
+  // //   const beerName = beer.name.toLowerCase();
+  // //   return beerName.includes(searchText, checked);
+  // // });
+
+  // // const checkClassicRange = (beerList) => (
+  // //   // check if classic range is ticked
+  // //   // if ticked - filter and return
+  // //   // if not return original array
+  // // );
+
+  // // const checkHighAcidity = (beerList) => (
+  // //   // check if high acidity is ticked
+  // //   // if ticked - filter and return
+  // //   // if not return original array
+  // // );
+
+  // const checkFilters = (beer) =>
+  //   checkClassicRange
+  //     ? classicRangeBeerList
+  //     : checkHighAcidity
+  //     ? highAcidityBeerList
+  //     : checkHighAlcohol
+  //     ? highAlcoholBeerList
+  //     : beers;
+  // apply high alcohol check to beer list array into a const
+  // apply classic range check against result above
+  // apply acidity check against range above
 
   const matchingBeers = beers.filter((beer) => {
+    //check filters then proceed to filter below
+    // checkFilters();
     const beerName = beer.name.toLowerCase();
-
-
-  const getHighAlcohol = beers.filter((beer) => {
-    const highAlcohol = beer.abv.key > 6;
-    return highAlcohol.includes(checked);
+    return beerName.includes(searchText, checked);
   });
 
-  const getClassicRange = beers.filter((beer) => {
-    const classicRange = beer.first_brewed.key < 2010;
-    return classicRange.includes(checked);
-  });
+  // const getHighAlcohol = beers.filter((beer) => {
+  //   const highAlcohol = beer.abv.key > 6;
+  //   return highAlcohol.includes(checked);
+  // });
 
+  // const getClassicRange = beers.filter((beer) => {
+  //   const classicRange = beer.first_brewed.key < 2010;
+  //   return classicRange.includes(checked);
+  // });
 
-  const getHighAcidity = beers.filter((beer) => {
-    const highAcidity = beer.ph.key < 4;
-    return highAcidity.includes(checked);
-  });
-
-
-    const getHighAlcohol = beers.filter((beer) => {
-    if (beerName.includes(searchText.toLowerCase()&& this.checked === highAlcohol);
-    return (getHighAlcohol);
-    if (beerName.includes(searchText.toLowerCase()&& this.checked === highAcidity);
-    return (getHighAcidity);
-    if (beerName.includes(searchText.toLowerCase()&& this.checked === classicRange)
-    return getClassicRange;
-    if (beerName.includes(searchText.toLowerCase()&& this === !checked)
-    return (matchingBeers)
-    else return 
-    <FeedbackPanel
-    header="No Matches"
-    text="None of our beers match that search"
-  />
-  });
+  // const getHighAcidity = beers.filter((beer) => {
+  //   const highAcidity = beer.ph.key < 4;
+  //   return highAcidity.includes(checked);
+  // });
 
   const contentJSX = matchingBeers.length ? (
     <CardList beers={matchingBeers} />
-   ) : (
-  //   <CardList beers={getClassicRange}/>
-  // ) : (
-  //   <CardList beers={getHighAcidity}/>
-  // ) : (
-  //   <CardList beers={getHighAlcohol}/>
-  // ) : (
+  ) : (
     <FeedbackPanel
       header="No Matches"
       text="None of our beers match that search"
     />
   );
+
+  // beerName.includes(searchText.toLowerCase() ? && this.checked === highAcidity?
+  //   <CardList beers={getHighAcidity} />
+  // ):(
+
+  // beerName.includes(searchText.toLowerCase()? && this.checked === classicRange?(
+  //   <CardList beers={getClassicRange} />
+  // ):(
+  // beerName.includes(searchText.toLowerCase()? && this === !checked? (
+
+  // ):(
+  //   <CardList beers={getClassicRange} />
+
+  //   :(
+  //
+  //   )
+  // );
+
+  //   <CardList beers={getClassicRange}/>
+  // ) : (
+  //   <CardList beers={getHighAcidity}/>
+  // ) : (
+  //   <CardList beers={getHighAlcohol}/>
+  // // ) : (
+  //   <FeedbackPanel
+  //     header="No Matches"
+  //     text="None of our beers match that search"
+  //   />
+  // );
 
   return <section className={styles.main}>{contentJSX} </section>;
 };

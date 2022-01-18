@@ -11,11 +11,12 @@ import FilterList from "./components/FilterList";
 
 import library from "./data/fa-library";
 import beers from "./data/beers";
-import filterSet from "./data/filters";
+import Filters from "./data/filters";
+// import Filters from "../../data/filters.js"
 
 const App = () => {
   const [searchText, setSearchText] = useState("");
-  const [filters, setFilters] = useState(filterSet);
+  const [filters, setFilters] = useState(Filters);
   const [checked, setChecked] = useState(false);
 
   return (
@@ -33,7 +34,7 @@ const App = () => {
         <Main beers={beers} />
       </section> */}
       <section className={styles.content}>
-        <Routes searchText={searchText} checked= {checked} />
+        <Routes searchText={searchText} filters={filters} checked= {setChecked}/>
       </section>
     </>
   );

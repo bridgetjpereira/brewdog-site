@@ -1,15 +1,21 @@
 @import "../../variables.scss";
 
 .nav {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   float: left;
   height: 100vh;
   max-width: 30%;
   margin-bottom: 10px;
   border-radius: 5px;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
-  border: solid 2px pink;
+  // box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+  // border: solid 2px green;
   backface-visibility: hidden;
   background-color: white;
   margin: 20px;
+}
+
+h1 {
+  font-size: 80px;
+  color: black;
+  text-align: center;
 }
