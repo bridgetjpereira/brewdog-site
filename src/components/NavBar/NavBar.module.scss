@@ -1,6 +1,8 @@
 @import "../../variables.scss";
 
 .nav {
+  display: flex;
+  flex-direction: column;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   float: left;
   // height: 100vh;
@@ -10,9 +12,10 @@
   // box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
   // border: solid 2px green;
   backface-visibility: hidden;
-  background-color: white;
+
   margin: 20px;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+
   // .backgroundImage {
   //   // height: 1000px;
   //   // width: 1000px;
@@ -21,14 +24,22 @@
 }
 
 h1 {
-  font-size: 80px;
-  color: rgb(36, 36, 36);
+  align-content: fle;
+  font-size: 30px;
+  color: rgb(77, 80, 80);
   text-align: center;
-  // box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+  padding-bottom: 25px;
+  background-color: white;
+  padding-top: 25px;
+  // border: solid 2px rgb(9, 194, 194);
+  border-radius: 10px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
   // border-radius: 10px;
 
   // border: solid 2px black;
   // border-radius: 10px;
+  border: solid 2px rgb(9, 194, 194);
+  border-radius: 10px;
 }
 
 body {
@@ -42,13 +53,17 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 200px;
+  align-content: flex-end;
+  width: 316px;
   height: 200px;
+  background-color: rgb(9, 194, 194);
 }
 
 .FilterList {
+  align-items: flex-end;
   border: solid 2px rgb(9, 194, 194);
   // background-color: rgb(9, 194, 194);
   border-radius: 10px;
-  // color: white;
+  background-color: white;
 }
+

@@ -9,7 +9,7 @@ const FilterList = (props) => {
 
   const getFilterItemJsx = (filterItem) => (
     <div className={styles.FilterList} key={filterItem.id}>
-      <FilterItem filterItem={filterItem} setFilters={setFilters}/>
+      <FilterItem filterItem={filterItem} setFilters={setFilters} />
       {/* <Checkbox/> */}
     </div>
   );
@@ -17,7 +17,9 @@ const FilterList = (props) => {
   return (
     <>
       <section className={styles.FilterList}>
-        <h2 className= {styles.filter} filter>Filter</h2>
+        <h2 className={styles.filter} filter>
+          Filters
+        </h2>
         {filters.map(getFilterItemJsx)}
       </section>
     </>

@@ -4,13 +4,13 @@
   display: grid;
   //   flex-wrap: wrap;
   grid-template-columns: repeat(auto-fill, 275px);
-  grid-gap: $base-spacing * 3;
-  grid-row-gap: 30px;
+  grid-gap: $base-spacing * 2;
+  grid-row-gap: 2px;
   //   grid-column-gap: 20px;
   justify-content: space-around;
   min-height: 100%;
   padding: $base-spacing * 1;
-  //   margin: 60px;
+  margin-top: 35px;
 }
 
 @media only screen and (min-width: 768px) {

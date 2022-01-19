@@ -2,7 +2,7 @@ const filters = [
   {
     id: 1,
     name: "High Alcohol",
-    value: "ABV > 6",
+    value: "ABV higher than 6",
     checked: false,
   },
 
