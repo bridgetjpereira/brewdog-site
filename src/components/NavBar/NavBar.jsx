@@ -6,6 +6,7 @@ import FilterItem from "../FilterItem/FilterItem";
 import { Link } from "@reach/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import filters from "../../data/filters";
+import Checkbox from "../Checkbox";
 // import BackgroundImage from "https://www.freepik.com/vectors/background";
 
 const Navbar = (props) => {
@@ -14,19 +15,19 @@ const Navbar = (props) => {
 
   return (
     <div className={styles.nav}>
-      <Link to="/">
-        <div className={styles.nav}>
-          <h1>Brewdog Beers</h1>
+      <Link to="/"> </Link>
+      <div className={styles.nav}>
+        <h1>Brewdog Beers</h1>
+        <div className={styles.searchPanel}>
+          <SearchBar
+            placeholder="Search for beers..."
+            searchText={searchText}
+            setSearchText={setSearchText}
+          />
         </div>
-      </Link>
+        {/* <Checkbox /> */}
+        {/* <SearchBar /> */}
 
-      {/* <SearchBar /> */}
-      <div className={styles.searchPanel}>
-        <SearchBar
-          placeholder="Search for beers..."
-          searchText={searchText}
-          setSearchText={setSearchText}
-        />
         <section className={styles.FilterList}>
           <FilterList filters={filters} setFilters={setFilters} />
           {/* <div
