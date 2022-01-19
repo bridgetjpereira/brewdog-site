@@ -1,27 +1,31 @@
 .searchBar {
   // max-height: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  max-width: 40%;
+  // display: flex;
+  // // flex-direction: row;
+  // justify-content: flex-end;
+  // max-width: 40%;
   list-style: none;
   $tertiary-color: rgb(141, 140, 140);
   font-size: 1em;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: rgb(9, 194, 194);
-  padding-right: 2em;
-  padding-left: 1.1em;
+  // padding-right: 3.5em;
+  padding-left: 1em;
   padding-top: 4em;
 }
 
 input {
   color: rgb(9, 194, 194);
   border: solid 2px rgb(9, 194, 194);
-  padding-left: 3em;
-  border-radius: 10px;
+  border-radius: 8px;
+  max-width: 200px;
 }
 
 .fa {
-  padding-left: 40px;
-  font-size: 4em;
+  padding-left: 10px;
+  font-size: 3em;
+}
+
+.searchTitle {
+  padding-right: 1px;
 }

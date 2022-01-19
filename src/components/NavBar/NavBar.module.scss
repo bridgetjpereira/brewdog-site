@@ -24,6 +24,9 @@ h1 {
   font-size: 80px;
   color: rgb(36, 36, 36);
   text-align: center;
+  // box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+  // border-radius: 10px;
+
   // border: solid 2px black;
   // border-radius: 10px;
 }
@@ -36,6 +39,9 @@ body {
 //   width: 300px;
 // }
 .searchPanel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   width: 200px;
   height: 200px;
 }

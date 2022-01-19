@@ -17,16 +17,15 @@ const Navbar = (props) => {
       <Link to="/"> </Link>
       <div className={styles.navTitle}>
         <h1>Brewdog Beers</h1>
-
-        <div className={styles.searchPanel}>
-          <SearchBar
-            placeholder="Search for beers..."
-            searchText={searchText}
-            setSearchText={setSearchText}
-          />
-        </div>
-
         <section className={styles.FilterList}>
+          <div className={styles.searchPanel}>
+            <SearchBar
+              placeholder="Search for beers..."
+              searchText={searchText}
+              setSearchText={setSearchText}
+            />
+          </div>
+
           <FilterList filters={filters} setFilters={setFilters} />
         </section>
       </div>

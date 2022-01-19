@@ -7,10 +7,13 @@
 // }
 
 .FilterList {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   // align-content: space-between;
   list-style: none;
+  font-size: 1em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(9, 194, 194);
 
   //   // font-size: 2em;
   //   font-family: Georgia, "Times New Roman", Times, serif;
@@ -20,11 +23,11 @@
 }
 
 .filter {
-  color: rgb(9, 194, 194);
+  font-size: 1em;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 1.5em;
-  padding-left: 1.3em;
-  padding-right: 1.3em;
-  border: solid 2px rgb(9, 194, 194);
-  width: 100px;
+  color: rgb(9, 194, 194);
+  padding-left: 2.3em;
+  // padding-right: 1.3em;
+  // border: solid 2px rgb(9, 194, 194);
+  // width: 100px;
 }
