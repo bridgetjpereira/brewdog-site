@@ -20,7 +20,7 @@ const Navbar = (props) => {
         </div>
       </Link>
 
-      <SearchBar />
+      {/* <SearchBar /> */}
       <div className={styles.searchPanel}>
         <SearchBar
           placeholder="Search for beers..."
