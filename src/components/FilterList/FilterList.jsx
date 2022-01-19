@@ -17,6 +17,7 @@ const FilterList = (props) => {
   return (
     <>
       <section className={styles.FilterList}>
+        <h1 className= {styles.filter} filter>Filter</h1>
         {filters.map(getFilterItemJsx)}
       </section>
     </>

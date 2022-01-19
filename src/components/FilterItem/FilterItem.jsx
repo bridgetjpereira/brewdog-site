@@ -11,9 +11,11 @@ const FilterItem = (props) => {
   return (
     <>
       <li className={styles.filterItem}>
-        <ul>{filterItem.name}</ul>
-        <ul>{filterItem.value}</ul>
-        <Checkbox filterItem={filterItem} setFilters={setFilters} />
+        <ul>
+          {filterItem.name} {filterItem.value}
+          </ul>
+          <Checkbox filterItem={filterItem} setFilters={setFilters} />
+       
       </li>
     </>
   );

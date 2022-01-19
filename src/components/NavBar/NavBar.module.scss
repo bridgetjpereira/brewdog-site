@@ -3,16 +3,16 @@
 .nav {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   float: left;
-  height: 100vh;
+  // height: 100vh;
   max-width: 20%;
   margin-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   // box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
   // border: solid 2px green;
   backface-visibility: hidden;
   background-color: white;
   margin: 20px;
-
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
   // .backgroundImage {
   //   // height: 1000px;
   //   // width: 1000px;
@@ -24,6 +24,8 @@ h1 {
   font-size: 80px;
   color: rgb(36, 36, 36);
   text-align: center;
+  // border: solid 2px black;
+  // border-radius: 10px;
 }
 
 body {
@@ -33,3 +35,14 @@ body {
 //   height: 300px;
 //   width: 300px;
 // }
+.searchPanel {
+  width: 200px;
+  height: 200px;
+}
+
+.FilterList {
+  border: solid 2px rgb(9, 194, 194);
+  // background-color: rgb(9, 194, 194);
+  border-radius: 10px;
+  // color: white;
+}

@@ -7,7 +7,6 @@ import { Link } from "@reach/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import filters from "../../data/filters";
 import Checkbox from "../Checkbox";
-// import BackgroundImage from "https://www.freepik.com/vectors/background";
 
 const Navbar = (props) => {
   const { searchText, setSearchText, filters, setFilters } = props;
@@ -16,8 +15,9 @@ const Navbar = (props) => {
   return (
     <div className={styles.nav}>
       <Link to="/"> </Link>
-      <div className={styles.nav}>
+      <div className={styles.navTitle}>
         <h1>Brewdog Beers</h1>
+
         <div className={styles.searchPanel}>
           <SearchBar
             placeholder="Search for beers..."
@@ -25,20 +25,10 @@ const Navbar = (props) => {
             setSearchText={setSearchText}
           />
         </div>
-        {/* <Checkbox /> */}
-        {/* <SearchBar /> */}
 
         <section className={styles.FilterList}>
           <FilterList filters={filters} setFilters={setFilters} />
-          {/* <div
-            style={{
-              backgroundImage: `url("https://www.freepik.com/free-vector/abstract-grunge-texture-with-halftone-effect_16738381.htm#query=background&position=15&from_view=keyword")`,
-            }}
-          ></div> */}
         </section>
-        {/* <section className={styles.FilterItem}>
-        <FilterItem />
-      </section> */}
       </div>
     </div>
   );

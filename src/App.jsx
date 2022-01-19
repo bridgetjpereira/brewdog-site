@@ -12,7 +12,7 @@ import FilterList from "./components/FilterList";
 import library from "./data/fa-library";
 import beers from "./data/beers";
 import Filters from "./data/filters";
-import background from "./SL_022121_40940_21.jpg";
+
 // import Filters from "../../data/filters.js"
 
 const App = () => {
@@ -22,17 +22,16 @@ const App = () => {
 
   return (
     <>
-    <div>
-      <section className={styles.nav}>
-        <NavBar
-          searchText={searchText}
-          setSearchText={setSearchText}
-          filters={filters}
-          setFilters={setFilters}
-          checked={checked}
-        />
-      </section>
-
+      <div>
+        <section className={styles.nav}>
+          <NavBar
+            searchText={searchText}
+            setSearchText={setSearchText}
+            filters={filters}
+            setFilters={setFilters}
+            checked={checked}
+          />
+        </section>
 
         <section className={styles.content}>
           <Routes
