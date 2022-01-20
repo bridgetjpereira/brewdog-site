@@ -3,8 +3,7 @@ import styles from "./SearchBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CardList from "../CardList";
 import beers from "../../data/beers";
-import FeedbackPanel
- from "../FeedbackPanel";
+import FeedbackPanel from "../FeedbackPanel";
 const SearchBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { placeholder, searchText, setSearchText } = props;

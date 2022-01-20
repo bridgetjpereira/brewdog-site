@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import beers from "../../data/beers";
 import styles from "./FilterItem.module.scss";
 import Checkbox from "../Checkbox/Checkbox";
-import filters from "../../data/filters";
-
 
 const FilterItem = (props) => {
-  const { filterItem, setFilters } = props;
+  const { filterItem, setFilters, toggleClicked } = props;
 
   //   const {isClicked, setIsClicked } = props;
 
@@ -14,13 +12,15 @@ const FilterItem = (props) => {
     <>
       <li className={styles.filterItem}>
         <ul>
-       
-       
           {/* <div className={styles.box}> */}
-          <Checkbox filterItem={filterItem} setFilters={setFilters} />
+          <Checkbox
+            filterItem={filterItem}
+            setFilters={setFilters}
+            toggleClicked={toggleClicked}
+          />
           {/* </div> */}
           {filterItem.name} {filterItem.value}
-          </ul>
+        </ul>
       </li>
     </>
   );

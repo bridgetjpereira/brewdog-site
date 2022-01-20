@@ -5,14 +5,16 @@ body {
 }
 
 .feedbackTitle {
-  color: rgb(9, 194, 194);
-  background-color: white;
+  color: white;
+  background-color: rgb(9, 194, 194);
 }
 
 .feedbackText {
-  color: rgb(9, 194, 194);
-  background-color: white;
+  color: white;
+  background-color: rgb(9, 194, 194);
 }
+
+
 
 .feedback {
   display: flex;
@@ -20,7 +22,8 @@ body {
   align-items: center;
   width: 900px;
   height: 450px;
-  background-color: white;
+  color: white;
+  background-color: rgb(9, 194, 194);
   border-radius: 5px;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
   padding-top: 20em;

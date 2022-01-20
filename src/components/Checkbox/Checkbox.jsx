@@ -1,27 +1,32 @@
 import React, { useState } from "react";
 import styles from "./Checkbox.module.scss";
+import filters from "../../data/filters";
 
 const Checkbox = (props) => {
-  const { filterItem, setFilters } = props;
-  const isChecked = filterItem.checked;
+  const { filterItem, setFilters, toggleClicked } = props;
 
-  console.log(isChecked);
+  const handleClick = (e) => {
+    e.stopPropagation();
+    toggleClicked(filterItem);
+    console.log(filterItem);
+    // setFilters(!filterItem.isChecked);
+  };
+  console.log(filterItem.isChecked);
 
   return (
     <>
       <div className={styles.Checkbox}>
         <input
           type="checkbox"
-          value={isChecked}
-          onChange={() => setFilters((isChecked) => !isChecked)}
+          value={filterItem.isChecked}
+          onChange={handleClick}
         />
-        {filterItem.checked ? "I've been ticked!" : ""}
+        {/* {filterItem.checked ? "I've been ticked!" : ""} */}
       </div>
     </>
   );
 };
-
-// export default Checkbox;
+export default Checkbox;
 
 // const Checkbox = () => {
 //   const [checked, setChecked] = useState(false);
@@ -35,6 +40,3 @@ const Checkbox = (props) => {
 //       {checked ? "checked" : "not checked"}
 //     </>
 //   );
-// };
-
-export default Checkbox;

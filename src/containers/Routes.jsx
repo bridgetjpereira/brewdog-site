@@ -4,12 +4,13 @@ import { Router } from "@reach/router";
 import Main from "../components/Main";
 import NotFound from "../components/NotFound";
 import FeedbackPanel from "../components/FeedbackPanel";
+import filters from "../data/filters";
 
 const Routes = (props) => {
-  const { searchText } = props;
+  const { searchText, filterItems } = props;
   return (
     <Router>
-      <Main path="/" searchText={searchText} />
+      <Main path="/" searchText={searchText} filterItems={filterItems}/>
       <NotFound default />
       
     </Router>
@@ -17,3 +18,4 @@ const Routes = (props) => {
 };
 
 export default Routes;
+

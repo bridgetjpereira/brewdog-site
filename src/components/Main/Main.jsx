@@ -3,10 +3,15 @@ import styles from "./Main.module.scss";
 import CardList from "../CardList";
 import beers from "../../data/beers";
 import FeedbackPanel from "../../components/FeedbackPanel";
-import Filters from "../../data/filters.js";
+import filters from "../../data/filters";
+// import filters from "../../data/filters.js";
 
 const Main = (props) => {
-  const { searchText, checked } = props;
+  const { searchText, filterItems } = props;
+
+  // const FilterItems = (filter) => {
+  //   filter.isChecked = !filter.isChecked;
+  // };
 
   // const checkHighAlcohol = (beerList) => (
   //   // check if high alcohol is ticked
@@ -132,8 +137,32 @@ const Main = (props) => {
   //     text="None of our beers match that search"
   //   />
   // );
-
-  return <section className={styles.main}>{contentJSX} </section>;
+  
+  return <section className={styles.main}>{contentJSX}</section>;
 };
 
 export default Main;
+
+// const FilterList = (props) => {
+//   const { filters, setFilters } = props;
+
+//   const filteredItems = filters.filter((filter) => filter.isChecked);
+
+//   const contentJSX = filteredItems.length ? (
+//     <CardList beers={filteredItems} />
+//   ) : (
+//     <FeedbackPanel
+//       header="No Filtered Items"
+//       text="Try returning to the main page and searching for your beer of choice"
+//     />
+
+//     // const { filters, setFilters } = props;
+
+//     // const getFilterItemJsx = (filterItem) => (
+//     //   <div className={styles.FilterList} key={filterItem.id}>
+//     //     <FilterItem filterItem={filterItem} setFilters={setFilters} />
+//     //     {/* <Checkbox/> */}
+//     //   </div>
+//   );
+//   return <section className={styles.FilterList}>{contentJSX}</section>;
+// };

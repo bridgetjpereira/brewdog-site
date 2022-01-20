@@ -6,11 +6,13 @@ import FilterList from "../FilterList";
 import { Link } from "@reach/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-
 const Navbar = (props) => {
   const { searchText, setSearchText, filters, setFilters } = props;
- 
+
+  const toggleClicked = (filter) => {
+    filter.isChecked = !filter.isChecked;
+    console.log(filter);
+  };
 
   return (
     <div className={styles.nav}>
@@ -26,7 +28,11 @@ const Navbar = (props) => {
             />
           </div>
 
-          <FilterList filters={filters} setFilters={setFilters} />
+          <FilterList
+            filters={filters}
+            setFilters={setFilters}
+            toggleClicked={toggleClicked}
+          />
         </section>
       </div>
     </div>
