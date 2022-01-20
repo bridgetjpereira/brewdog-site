@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "./FilterList.module.scss";
 import Navbar from "../NavBar/NavBar";
 import FilterItem from "../FilterItem/FilterItem";
-import Checkbox from "../Checkbox/Checkbox";
+import filters from "../../data/filters";
+
 
 const FilterList = (props) => {
   const { filters, setFilters } = props;

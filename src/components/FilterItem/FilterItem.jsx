@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import beers from "../../data/beers";
 import styles from "./FilterItem.module.scss";
 import Checkbox from "../Checkbox/Checkbox";
+import filters from "../../data/filters";
+
 
 const FilterItem = (props) => {
   const { filterItem, setFilters } = props;

@@ -16,8 +16,8 @@ const Main = (props) => {
   //   // if not return original array
   // );
 
-//let beerCheck1 = checkHighAlochol(beers)
-//let beerCheck2 = checkClassicRange(beerCheck1)
+  //let beerCheck1 = checkHighAlochol(beers)
+  //let beerCheck2 = checkClassicRange(beerCheck1)
 
   // const checkHighAlcohol = (beerList) => {
   //   const highAlcohol = beer.abv.key > 6;
@@ -36,7 +36,7 @@ const Main = (props) => {
   // const checkHighAcidity = (beer) => {
   //   const highAcidity = beer.ph.key < 4;
   //   highAcidity.includes(checked)
-  //     ? highAcidityBeersList = beers.filter(highAcidity) 
+  //     ? highAcidityBeersList = beers.filter(highAcidity)
   //     : beers;
   //   // check if high acidity is ticked
   //   // if ticked - filter and return
@@ -77,7 +77,7 @@ const Main = (props) => {
     //check filters then proceed to filter below
     // checkFilters();
     const beerName = beer.name.toLowerCase();
-    return beerName.includes(searchText, checked);
+    return beerName.includes(searchText.toLowerCase());
   });
 
   // const getHighAlcohol = beers.filter((beer) => {

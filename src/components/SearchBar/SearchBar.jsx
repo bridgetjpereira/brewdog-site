@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import CardList from "../CardList";
+import beers from "../../data/beers";
+import FeedbackPanel
+ from "../FeedbackPanel";
 const SearchBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { placeholder, searchText, setSearchText } = props;
@@ -15,11 +18,27 @@ const SearchBar = (props) => {
     />
   ) : null;
 
+  // //added this
+  // const matchingBeers = beers.filter((beer) => {
+  //   const beerName = beer.name.toLowerCase();
+  //   return beerName.includes(searchText);
+  // });
+  // //
+
+  // const contentJSX = matchingBeers.length ? (
+  //   <CardList beers={matchingBeers} />
+  // ) : (
+  //   <FeedbackPanel
+  //     header="No Matches"
+  //     text="None of our beers match that search"
+  //   />
+  // );
+
+  // return <section className={styles.SearchBar}>{contentJSX} </section>;
+
   return (
     <div className={styles.searchBar}>
-       <div className={styles.searchTitle}>
-      Search 
-      </div>
+      <div className={styles.searchTitle}>Search</div>
       {input}
       <span className={styles.fa} onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon="search" />
