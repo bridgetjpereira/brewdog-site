@@ -9,12 +9,15 @@ import FeedbackPanel from "../../components/FeedbackPanel";
 //1. Function to tell if checkbox has been clicked.
 
 const Main = (props) => {
-  const { searchText, filterItems } = props;
+  const { searchText, filterItem } = props;
 
-  useEffect(() => {
-    console.log("Something was updated");
-    console.log(filterItems);
-  });
+  const toggleClicked = (filterItem) => {
+    filterItem.isClicked = !filterItem.isClicked;
+  };
+  // useEffect(() => {
+  //   console.log("Something was updated");
+  //   console.log(filterItems);
+  // });
 
   // function checkFilters that takes beers Array
   // function cycles through each filter to see if filterIsChecked
@@ -30,7 +33,7 @@ const Main = (props) => {
 
   // const getHighAlcohol = beers.filter((beer) => {
   //   // const highAlcohol = beer.abv.key > 6;
-  //   return highAlcohol.includes(checked);
+  //   return highAlcohol.includes(toggleClicked);
   // });
 
   // const classicRange = beer.first_brewed.key < 2010;
@@ -66,7 +69,7 @@ const Main = (props) => {
   // )  matchingBeers.length ? && !filterItem.isChecked (
   // <CardList beer={matchingBeers}/>
   const contentJSX = matchingBeers.length ? (
-    <CardList beers={matchingBeers} />
+    <CardList beers={matchingBeers} toggleClicked={toggleClicked} />
   ) : (
     <FeedbackPanel
       header="No Matches"
