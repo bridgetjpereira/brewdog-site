@@ -7,15 +7,13 @@ import FeedbackPanel from "../components/FeedbackPanel";
 import filters from "../data/filters";
 
 const Routes = (props) => {
-  const { searchText, filterItems } = props;
+  const { searchText, filters } = props;
   return (
     <Router>
-      <Main path="/" searchText={searchText} filterItems={filterItems}/>
+      <Main path="/" searchText={searchText} filterItems={filters} />
       <NotFound default />
-      
     </Router>
   );
 };
 
 export default Routes;
-

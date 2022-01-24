@@ -1,7 +1,12 @@
-.Checkbox {
-  padding-right: 20px;
-  
- 
- 
- 
+@import "../../variables.scss";
+
+.checkbox {
+  // color: $primary-color;
+  color: rgb(9, 194, 194);
+  font-size: 1.3rem;
+
+  &:hover {
+    // color: 
+    color: rgb(9, 194, 194);
+  }
 }

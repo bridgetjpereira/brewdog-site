@@ -9,7 +9,7 @@ import {
   faArrowRight,
   faHeart,
   faGlobe,
-  faBookOpen,
+  faBookOpen
 } from "@fortawesome/free-solid-svg-icons";
 
 export default library.add(

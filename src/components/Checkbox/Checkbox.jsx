@@ -1,31 +1,37 @@
 import React, { useState } from "react";
 import styles from "./Checkbox.module.scss";
 import filters from "../../data/filters";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Checkbox = (props) => {
   const { filterItem, setFilters, toggleClicked } = props;
+  const [isClicked, setisClicked] = useState(filterItem.isClicked);
 
   const handleClick = (e) => {
     e.stopPropagation();
-    toggleClicked(filterItem);
-    console.log(filterItem);
-    // setFilters(!filterItem.isChecked);
+    toggleClicked(filterItem); //Updates filters.js with changed state of checkbox
+    setisClicked(!isClicked); //Sets state of filters in app.jsx to new filters.jsx
   };
-  console.log(filterItem.isChecked);
+  const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
+
+  console.log(checkboxIcon);
 
   return (
     <>
-      <div className={styles.Checkbox}>
-        <input
+      <span className={styles.checkbox} onClick={handleClick}>
+        <FontAwesomeIcon icon={checkboxIcon} />
+      </span>
+      {/* {/* /* <input
           type="checkbox"
           value={filterItem.isChecked}
-          onChange={handleClick}
-        />
-        {/* {filterItem.checked ? "I've been ticked!" : ""} */}
-      </div>
+          onClick={handleClick}
+          // onChange={(e) => setFilters(e.target.checked)}
+        /> */
+      /* {filterItem.checked ? "I've been ticked!" : ""} */}
     </>
   );
 };
+
 export default Checkbox;
 
 // const Checkbox = () => {

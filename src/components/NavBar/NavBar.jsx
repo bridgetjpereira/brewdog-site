@@ -11,7 +11,6 @@ const Navbar = (props) => {
 
   const toggleClicked = (filter) => {
     filter.isChecked = !filter.isChecked;
-    console.log(filter);
   };
 
   return (

@@ -1,13 +1,78 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Main.module.scss";
 import CardList from "../CardList";
 import beers from "../../data/beers";
 import FeedbackPanel from "../../components/FeedbackPanel";
-import filters from "../../data/filters";
+
 // import filters from "../../data/filters.js";
+
+//1. Function to tell if checkbox has been clicked.
 
 const Main = (props) => {
   const { searchText, filterItems } = props;
+
+  useEffect(() => {
+    console.log("Something was updated");
+    console.log(filterItems);
+  });
+
+  // function checkFilters that takes beers Array
+  // function cycles through each filter to see if filterIsChecked
+  // if checked changes beersArray to only those that meet the criteria otherwise returns normal Array
+  const matchingBeers = beers.filter((beer) => {
+    //check filters then proceed to filter below
+    // checkFilters();
+    const beerName = beer.name.toLowerCase();
+    return beerName.includes(searchText.toLowerCase());
+  });
+
+  // const highAlcohol = beer.abv.key > 6;
+
+  // const getHighAlcohol = beers.filter((beer) => {
+  //   // const highAlcohol = beer.abv.key > 6;
+  //   return highAlcohol.includes(checked);
+  // });
+
+  // const classicRange = beer.first_brewed.key < 2010;
+
+  // const getClassicRange = beers.filter((beer) => {
+  //   // const classicRange = beer.first_brewed.key < 2010;
+  //   return classicRange.includes(checked);
+  // });
+
+  // const highAcidity = beer.ph.key < 4;
+
+  // const getHighAcidity = beers.filter((beer) => {
+  //   // const highAcidity = beer.ph.key < 4;
+  //   return highAcidity.includes(checked);
+  // })
+  // const contentJSX =
+  // matchingBeers.length && highAlcohol ? (
+  // <CardList beers={getHighAlcohol} />
+  // ) : (  matchingBeers.length ? && filterItem.isChecked && highAcidity(
+  //   <CardList beer={getHighAcidity}/>
+  // ) : ( matchingBeers.length ? && filterItem.isChecked && classicRange(
+  //   <CardList beer={getClassicRange}/>
+  // ) : ( matchingBeers.length ? && filterItem.isChecked && classicRange && highAcidity(
+  //   <CardList beer={getClassicRange} {getHighAcidity}/>
+  // ) : ( matchingBeers.length ? && filterItem.isChecked && highAlcohol && highAcidity(
+  //   <CardList beer={getHighAlcohol} {getHighAcidity}/>
+  // ) : (  matchingBeers.length ? && filterItem.isChecked && classicRange && highAcidity (
+  //   <CardList beer={getClassicRange} {getHighAcidity}/>
+  // ) : ( matchingBeers.length ? && filterItem.isChecked && classicRange && highAlcohol(
+  //   <CardList beer={getClassicRange} {getHighAlcohol}/>
+  // ):  (  matchingBeers.length ? && filterItem.isChecked && classicRange && highAlcohol && highAcidity(
+  //   <CardList beer={getClassicRange} {getHighAlcohol} {getHighAcidity}/>
+  // )  matchingBeers.length ? && !filterItem.isChecked (
+  // <CardList beer={matchingBeers}/>
+  const contentJSX = matchingBeers.length ? (
+    <CardList beers={matchingBeers} />
+  ) : (
+    <FeedbackPanel
+      header="No Matches"
+      text="None of our beers match that search"
+    />
+  );
 
   // const FilterItems = (filter) => {
   //   filter.isChecked = !filter.isChecked;
@@ -78,70 +143,48 @@ const Main = (props) => {
   // apply classic range check against result above
   // apply acidity check against range above
 
-  const matchingBeers = beers.filter((beer) => {
-    //check filters then proceed to filter below
-    // checkFilters();
-    const beerName = beer.name.toLowerCase();
-    return beerName.includes(searchText.toLowerCase());
-  });
-
-  // const getHighAlcohol = beers.filter((beer) => {
-  //   const highAlcohol = beer.abv.key > 6;
-  //   return highAlcohol.includes(checked);
-  // });
-
-  // const getClassicRange = beers.filter((beer) => {
-  //   const classicRange = beer.first_brewed.key < 2010;
-  //   return classicRange.includes(checked);
-  // });
-
-  // const getHighAcidity = beers.filter((beer) => {
-  //   const highAcidity = beer.ph.key < 4;
-  //   return highAcidity.includes(checked);
-  // });
-
-  const contentJSX = matchingBeers.length ? (
-    <CardList beers={matchingBeers} />
-  ) : (
-    <FeedbackPanel
-      header="No Matches"
-      text="None of our beers match that search"
-    />
-  );
-
-  // beerName.includes(searchText.toLowerCase() ? && this.checked === highAcidity?
-  //   <CardList beers={getHighAcidity} />
-  // ):(
-
-  // beerName.includes(searchText.toLowerCase()? && this.checked === classicRange?(
-  //   <CardList beers={getClassicRange} />
-  // ):(
-  // beerName.includes(searchText.toLowerCase()? && this === !checked? (
-
-  // ):(
-  //   <CardList beers={getClassicRange} />
-
-  //   :(
-  //
-  //   )
-  // );
-
-  //   <CardList beers={getClassicRange}/>
-  // ) : (
-  //   <CardList beers={getHighAcidity}/>
-  // ) : (
-  //   <CardList beers={getHighAlcohol}/>
-  // // ) : (
-  //   <FeedbackPanel
-  //     header="No Matches"
-  //     text="None of our beers match that search"
-  //   />
-  // );
-  
   return <section className={styles.main}>{contentJSX}</section>;
 };
 
 export default Main;
+
+// const contentJSX = matchingBeers.length ? (
+//   <CardList beers={matchingBeers} />
+// ) : (
+//   <FeedbackPanel
+//     header="No Matches"
+//     text="None of our beers match that search"
+//   />
+// );
+
+// beerName.includes(searchText.toLowerCase() ? && this.checked === highAcidity?
+//   <CardList beers={getHighAcidity} />
+// ):(
+
+// beerName.includes(searchText.toLowerCase()? && this.checked === classicRange?(
+//   <CardList beers={getClassicRange} />
+// ):(
+// beerName.includes(searchText.toLowerCase()? && this === !checked? (
+
+// ):(
+//   <CardList beers={getClassicRange} />
+
+//   :(
+//
+//   )
+// );
+
+//   <CardList beers={getClassicRange}/>
+// ) : (
+//   <CardList beers={getHighAcidity}/>
+// ) : (
+//   <CardList beers={getHighAlcohol}/>
+// // ) : (
+//   <FeedbackPanel
+//     header="No Matches"
+//     text="None of our beers match that search"
+//   />
+// );
 
 // const FilterList = (props) => {
 //   const { filters, setFilters } = props;
