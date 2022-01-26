@@ -1,33 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import styles from "./Checkbox.module.scss";
 import filters from "../../data/filters";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Checkbox = (props) => {
   const { filterItem, setFilters, toggleClicked } = props;
-  const [isClicked, setisClicked] = useState(filterItem.isClicked);
+  const [isClicked, setisClicked] = useState(false);
+
+  // const [isClicked, setisClicked] = useReducer((checked) => !checked, false);
+
+  // const [checkedState, setCheckedState] = useState(
+  //   new Array(filters.length).fill(false)
+  // );
+  // const CheckboxComponent = () => {
+  //   const [checkedState, setCheckedState] = useState(false);
+
+  //   return(
+  //     <div>
+  //       <input type="checkbox"
+  //       checked={checkedState}
+  //       onChange={()=> setCheckedState((x)=> !x)}
+  //      />
+  //     </div>
+  //   )
+  // };
+
+  // (filterItem.isClicked);
+  // console.log("Checked State" + checkedState);
 
   const handleClick = (e) => {
     e.stopPropagation();
     toggleClicked(filterItem); //Updates filters.js with changed state of checkbox
     setisClicked(!isClicked); //Sets state of filters in app.jsx to new filters.jsx
+    setFilters(filterItem);
   };
   const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
 
-  console.log(checkboxIcon);
+  // console.log(filterItem);
+  // console.log(checkboxIcon);
 
   return (
     <>
-      <span className={styles.checkbox} onClick={handleClick}>
-        <FontAwesomeIcon icon={checkboxIcon} />
-      </span>
-      {/* {/* /* <input
-          type="checkbox"
-          value={filterItem.isChecked}
+      <span className={styles.checkbox}>
+        <FontAwesomeIcon
+          icon={checkboxIcon}
+          value={isClicked}
           onClick={handleClick}
-          // onChange={(e) => setFilters(e.target.checked)}
-        /> */
-      /* {filterItem.checked ? "I've been ticked!" : ""} */}
+        />
+      </span>
     </>
   );
 };

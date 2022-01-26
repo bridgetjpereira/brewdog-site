@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import beers from "../../data/beers";
+// import beers from "../../data/beers";
 import styles from "./FilterItem.module.scss";
 import Checkbox from "../Checkbox/Checkbox";
 

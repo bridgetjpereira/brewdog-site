@@ -10,7 +10,7 @@ const Navbar = (props) => {
   const { searchText, setSearchText, filters, setFilters } = props;
 
   const toggleClicked = (filter) => {
-    filter.isChecked = !filter.isChecked;
+    filter.isClicked = !filter.isClicked;
   };
 
   return (

@@ -1,23 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Main.module.scss";
 import CardList from "../CardList";
 import beers from "../../data/beers";
 import FeedbackPanel from "../../components/FeedbackPanel";
+import filterList from "../../data/filters";
+import filters from "../../data/filters";
 
 // import filters from "../../data/filters.js";
 
 //1. Function to tell if checkbox has been clicked.
 
 const Main = (props) => {
-  const { searchText, filterItem } = props;
+  const { searchText, filterItems, setFilters } = props;
+
+  // const [filters, setFilterItems] = useState(filterList);
+
+  //const [isClicked, setisClicked] = useState(filterItem.isClicked);
 
   const toggleClicked = (filterItem) => {
     filterItem.isClicked = !filterItem.isClicked;
   };
-  // useEffect(() => {
-  //   console.log("Something was updated");
-  //   console.log(filterItems);
+
+  const checkFilters = (filter) => {
+    filters.isClicked ? console.log(filters.name) : console.log(false);
+  };
+
+  // const getHighAlcohol = beers.filter((beer) => {
+  //   const highAlcohol = beers.abv.value > 6;
+  //   return highAlcohol;
   // });
+
+  // const highAlcoholBeerList=
+  //  filters.isClicked? filters.name = "High Alcohol"
+
+  //  return getHighAlcohol() : null
+
+  //   var predicate = (x) => x > 10;
+  // var output = input.filter(predicate);
+  // input = input.filter(x => !predicate(x));
 
   // function checkFilters that takes beers Array
   // function cycles through each filter to see if filterIsChecked
@@ -25,30 +45,26 @@ const Main = (props) => {
   const matchingBeers = beers.filter((beer) => {
     //check filters then proceed to filter below
     // checkFilters();
+    filterItems.map(checkFilters);
     const beerName = beer.name.toLowerCase();
     return beerName.includes(searchText.toLowerCase());
   });
 
-  // const highAlcohol = beer.abv.key > 6;
-
   // const getHighAlcohol = beers.filter((beer) => {
-  //   // const highAlcohol = beer.abv.key > 6;
-  //   return highAlcohol.includes(toggleClicked);
+  //   const highAlcohol = beer.abv.key > 6;
+  //   return highAlcohol.includes(isClicked);
   // });
-
-  // const classicRange = beer.first_brewed.key < 2010;
 
   // const getClassicRange = beers.filter((beer) => {
-  //   // const classicRange = beer.first_brewed.key < 2010;
-  //   return classicRange.includes(checked);
+  //   const classicRange = beer.first_brewed.key < 2010;
+  //   return classicRange.includes(isClicked);
   // });
 
-  // const highAcidity = beer.ph.key < 4;
-
   // const getHighAcidity = beers.filter((beer) => {
-  //   // const highAcidity = beer.ph.key < 4;
-  //   return highAcidity.includes(checked);
-  // })
+  //   const highAcidity = beers.ph.key < 4;
+  //   return highAcidity.includes(isClicked);
+  // });
+
   // const contentJSX =
   // matchingBeers.length && highAlcohol ? (
   // <CardList beers={getHighAlcohol} />

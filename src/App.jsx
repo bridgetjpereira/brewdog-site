@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Router, Link } from "@reach/router";
 import Card from "./components/Card";
 
@@ -10,16 +10,30 @@ import NotFound from "./components/NotFound/NotFound.jsx";
 import FilterList from "./components/FilterList";
 
 import library from "./data/fa-library";
-import beers from "./data/beers";
 import Filters from "./data/filters";
 
 
 
-// import Filters from "../../data/filters.js"
-
 const App = () => {
   const [searchText, setSearchText] = useState("");
   const [filters, setFilters] = useState(Filters);
+  const [beers, setBeers] = useState([]);
+
+  const getBeers = () => {
+    fetch("https://api.punkapi.com/v2/beers")
+      .then((response) => response.json())
+      .then((response) => setBeers(response));
+  };
+
+  useEffect(() => {
+    getBeers();
+  }, []);
+
+  const updateFilters = useCallback(() => {
+    setFilters(filters);
+
+    console.log(filters);
+  }, [filters]);
 
   return (
     <>
@@ -29,31 +43,21 @@ const App = () => {
             searchText={searchText}
             setSearchText={setSearchText}
             filters={filters}
-            setFilters={setFilters}
+            setFilters={updateFilters}
           />
         </section>
 
         <section className={styles.content}>
-          <Routes searchText={searchText} filters={filters} />
+          <Routes
+            searchText={searchText}
+            filters={filters}
+            setFilters={updateFilters}
+          />
         </section>
       </div>
     </>
   );
 };
 
-// import React from "react";
-// import background from "./img/placeholder.png";
-
-// function App() {
-//   return (
-//     <div style={{ backgroundImage: `url(${background})` }}>
-//       Hello World
-//     </div>
-//   );
-// }
-
-// export default App;
-
-// https://www.freepik.com/free-vector/abstract-grunge-texture-with-halftone-effect_16738381.htm#query=background&position=15&from_view=keyword
 
 export default App;
