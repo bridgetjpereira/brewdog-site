@@ -3,28 +3,32 @@
 .nav {
   display: flex;
   flex-direction: column;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: sans-serif;
   float: left;
   max-width: 20%;
   margin-bottom: 10px;
   border-radius: 10px;
   backface-visibility: hidden;
   margin: 20px;
-  
 }
 
 h1 {
-  align-content: fle;
-  font-size: 30px;
-  color: rgb(77, 80, 80);
+  // align-content: fle;
+  font-size: 38px;
+  color: white;
   text-align: center;
   padding-bottom: 25px;
-  background-color: white;
+  background-color: rgb(9, 194, 194);
   padding-top: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
   border: solid 2px rgb(9, 194, 194);
   border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+
+  // -webkit-text-stroke: 1px white;
+  // -webkit-text-fill-color: rgb(9, 194, 194);
 }
 
 body {
@@ -46,4 +50,3 @@ body {
   border-radius: 10px;
   background-color: white;
 }
-
