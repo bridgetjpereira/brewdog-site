@@ -15,4 +15,9 @@ describe("Card tests", () => {
   it("should render", () => {
     expect(component).toBeTruthy();
   });
+
+  it("should render the correct name based on the beer passed in as props", () => {
+    const beerTitle = testBeer.name;
+    expect(component.text()).toContain(beerTitle);
+  });
 });
