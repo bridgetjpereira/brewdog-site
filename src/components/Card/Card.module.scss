@@ -1,149 +1,17 @@
 @import "../../variables.scss";
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // max-height: 200em;
-  // max-width: 300em;
-  // margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
-  // border: solid 2px black;
-  backface-visibility: hidden;
-  background-color: white;
-
-  float: right;
-  // height: 100%;
-  // width: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-  perspective: 600px;
-  position: relative;
-  z-index: 0;
-  padding-top: 1em;
-  height: 400px;
-  width: 275px;
-  
-
-  // .recipeCard {
-  //   height: 100%;
-  //   width: 100%;
-  //   transition: transform 1s;
-  //   transform-style: preserve-3d;
-  //   perspective: 600px;
-  //   position: relative;
-  //   z-index: 0;
-
-  //   &.faceDown {
-  //     transform: rotateY(180deg);
-  //   }
-
-  //   .front {
-  //     @extend %card;
-  //   }
-
-  //   .back {
-  //     @extend %card;
-  //     transform: rotateY(180deg);
-  //   }
-  // }
-}
-
-// .img{
-//   align-content:right;
-// }
-
-.cardTitle {
-  padding-top: 1em;
-  font-size: 1.5em;
-  text-align: center;
-  color: rgb(9, 194, 194);
-}
-
-
-// .description {
-//   background-color: rgb(9, 194, 194);
-//   padding: 2em;
-//   height: 200px;
-
-// }
-
-.tagTitle {
-  font-size: 0.5 em;
-  padding-top: 2em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
-
-// .span {
-
-//   padding-bottom: 4em;
-//   padding-right: 4em;
-
-// }
-
-.description {
-  // padding-right: 4em;
-  font-size: 1em;
-  max-width: 90%;
-  margin-bottom: $base-spacing * 2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-p {
-  font-size: 1em;
-  // padding: 1.5em;
-  text-align: center;
-}
-
-img {
-  height: 35%;
-  width: 20%;
-  border-radius: 2px 2px 0 0;
-  padding: 2em;
-  border: solid 2px rgb(9, 194, 194);
-  border-radius: 10px;
-}
-
-.beerDetails {
-  height: 40%;
-  width: 100%;
-  padding: $base-spacing * 4;
-  border-top: none;
-  border-radius: 0 2px 2px 0;
-  display: flex;
-  flex-direction: column;
-  padding-top: $base-spacing * 2;
-}
-
-h1 {
-  font-size: 1.3 rem;
-}
-
-h2 {
-  color: $primary-color;
-  font-size: 1.3 rem;
-  margin-bottom: $base-spacing;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-p {
-  color: $secondary-text;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-// @import "../../variables.scss";
-
-// .recipeCard {
+// .beerCard {
+//   // display: flex;
+//   // flex-direction: column;
+//   // align-items: center;
+//   // max-height: 200em;
+//   // max-width: 300em;
+//   // margin-bottom: 10px;
+//   border-radius: 5px;
+//   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+//   // border: solid 2px black;
+//   backface-visibility: hidden;
+//   background-color: white;
 //   height: 100%;
 //   width: 100%;
 //   transition: transform 1s;
@@ -151,17 +19,60 @@ p {
 //   perspective: 600px;
 //   position: relative;
 //   z-index: 0;
+//   // float: right;
+//   height: 100%;
+//   width: 100%;
+//   // padding-top: 1em;
+//   height: 400px;
+//   width: 275px;
 
 //   &.faceDown {
 //     transform: rotateY(180deg);
 //   }
 
-//   .front {
-//     @extend %card;
-//   }
+.beerCard {
+  text-align: center;
+  background-color: transparent;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  perspective: 600px;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
 
-//   .back {
-//     @extend %card;
-//     transform: rotateY(180deg);
-//   }
-// }
+  &:hover {
+    box-shadow: 0 4px 7px rgb(9, 194, 194);
+  }
+
+  &.faceDown {
+    transform: rotateY(180deg);
+  }
+
+  .front {
+    // @extend %card!optional;
+    // width: 100%;
+    // height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background-color: ghostwhite;
+  }
+
+  .back {
+    // @extend %card!optional;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: ghostwhite;
+
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+}
