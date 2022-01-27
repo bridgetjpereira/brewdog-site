@@ -4,7 +4,7 @@ import filters from "../../data/filters";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Checkbox = (props) => {
-  const { filterItem, setFilters, toggleClicked } = props;
+  const { filter, setFilters, toggleClicked } = props;
   const [isClicked, setisClicked] = useState(false);
 
   // const [isClicked, setisClicked] = useReducer((checked) => !checked, false);
@@ -30,9 +30,9 @@ const Checkbox = (props) => {
 
   const handleClick = (e) => {
     e.stopPropagation();
-    toggleClicked(filterItem); //Updates filters.js with changed state of checkbox
+    toggleClicked(filter); //Updates filters.js with changed state of checkbox
     setisClicked(!isClicked); //Sets state of filters in app.jsx to new filters.jsx
-    setFilters(filterItem);
+    setFilters(filters);
   };
   const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
 

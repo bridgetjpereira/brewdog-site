@@ -21,9 +21,9 @@ const Main = (props) => {
     filterItem.isClicked = !filterItem.isClicked;
   };
 
-  const checkFilters = (filter) => {
-    filters.isClicked ? console.log(filters.name) : console.log(false);
-  };
+  // const checkFilters = (filter) => {
+  //   filters.isClicked ? console.log(filters.name) : console.log(false);
+  // };
 
   // const getHighAlcohol = beers.filter((beer) => {
   //   const highAlcohol = beers.abv.value > 6;
@@ -45,7 +45,7 @@ const Main = (props) => {
   const matchingBeers = beers.filter((beer) => {
     //check filters then proceed to filter below
     // checkFilters();
-    filterItems.map(checkFilters);
+    // filterItems.map(checkFilters);
     const beerName = beer.name.toLowerCase();
     return beerName.includes(searchText.toLowerCase());
   });

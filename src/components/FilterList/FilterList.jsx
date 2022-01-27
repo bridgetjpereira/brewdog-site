@@ -13,15 +13,15 @@
 import React, { useState } from "react";
 import styles from "./FilterList.module.scss";
 import Navbar from "../NavBar/NavBar";
-import FilterItem from "../FilterItem/FilterItem";
+import FilterItem from "../FilterItem";
 
 const FilterList = (props) => {
   const { filters, setFilters, toggleClicked } = props;
 
-  const getFilterItemJsx = (filterItem) => (
-    <div className={styles.FilterList} key={filterItem.id}>
+  const getFilterItemJsx = (filter) => (
+    <div className={styles.FilterList} key={filter.id}>
       <FilterItem
-        filterItem={filterItem}
+        filter={filter}
         setFilters={setFilters}
         toggleClicked={toggleClicked}
       />

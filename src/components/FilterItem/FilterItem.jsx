@@ -4,7 +4,7 @@ import styles from "./FilterItem.module.scss";
 import Checkbox from "../Checkbox/Checkbox";
 
 const FilterItem = (props) => {
-  const { filterItem, setFilters, toggleClicked } = props;
+  const { filter, setFilters, toggleClicked } = props;
 
   //   const {isClicked, setIsClicked } = props;
 
@@ -14,12 +14,11 @@ const FilterItem = (props) => {
         <ul>
           {/* <div className={styles.box}> */}
           <Checkbox
-            filterItem={filterItem}
+            filter={filter}
             setFilters={setFilters}
             toggleClicked={toggleClicked}
           />
-          {/* </div> */}
-          {filterItem.name} {filterItem.value}
+          {filter.name} {filter.value}
         </ul>
       </li>
     </>

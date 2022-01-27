@@ -1,19 +1,16 @@
-// const CardList = (props) => {
-//     const { beers } = props;
+import React from "react";
+import CardList from "./CardList";
+import { shallow } from "enzyme";
+import beers from "../../data/beers";
 
-//     const getCardJsx = (beer) => (
-//       <div className={styles.CardList} key={beer.name}>
-//         <Card beer={beer} />
-//       </div>
-//     );
+describe("CardList tests", () => {
+  let component;
 
-//     return <section className={styles.CardList}>{beers.map(getCardJsx)}</section>;
-//   };
-//   //   return (
-//   //       <Card beer={beer} />
-//   //   );
-//   // };
+  beforeEach(() => {
+    component = shallow(<CardList beers = {beers} />);
+  });
 
-//   export default CardList;
-
-// Test:function aim= to take in beers array and return new array of cards using map method
+  it("should render", () => {
+    expect(component).toBeTruthy();
+  });
+});
