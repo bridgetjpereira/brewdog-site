@@ -13,7 +13,7 @@ const CardFront = (props) => {
       </div>
 
       <div className={styles.tagLine}>
-        <h2>{tagline}</h2>
+        <h3>{tagline}</h3>
       </div>
     </div>
   );

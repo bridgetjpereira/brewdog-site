@@ -46,9 +46,11 @@
     text-overflow: ellipsis;
     max-width: 90%;
     margin-bottom: $base-spacing * 2;
-    white-space: nowrap;
+    // white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    // text-overflow: ellipsis;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
   h3 {
