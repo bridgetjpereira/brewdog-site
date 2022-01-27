@@ -20,4 +20,9 @@ describe("Card tests", () => {
     const beerTitle = testBeer.name;
     expect(component.text()).toContain(beerTitle);
   });
+
+  it("should render the correct image", () => {
+    const beerImage = testBeer.image_url;
+    expect(component.find("img").prop("src")).toBe(beerImage);
+  });
 });
