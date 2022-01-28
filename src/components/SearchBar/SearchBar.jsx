@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import CardList from "../CardList";
-// import beers from "../../data/beers";
-import FeedbackPanel from "../FeedbackPanel";
+import beers from "../../data/beers";
+
 const SearchBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const { placeholder, searchText, setSearchText } = props;
@@ -13,7 +12,7 @@ const SearchBar = (props) => {
       type="text"
       placeholder={placeholder}
       value={searchText}
-      onChange={(e) => setSearchText(e.target.value)}
+      onInput={(e) => setSearchText(e.target.value)}
     />
   ) : null;
 
