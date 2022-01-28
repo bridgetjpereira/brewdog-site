@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "./Card";
 import { shallow } from "enzyme";
+import CardFront from "../CardFront";
+import CardBack from "../CardBack";
 import beers from "../../data/beers";
 
 describe("Card tests", () => {
@@ -16,13 +18,8 @@ describe("Card tests", () => {
     expect(component).toBeTruthy();
   });
 
-  it("should render the correct name based on the beer passed in as props", () => {
-    const beerTitle = testBeer.name;
-    expect(component.text()).toContain(beerTitle);
-  });
-
-  it("should render the correct image", () => {
-    const beerImage = testBeer.image_url;
-    expect(component.find("img").prop("src")).toBe(beerImage);
+  it("should not have faceDown class by default", () => {
+    const element = component.find(".beerCard");
+    expect(element.hasClass("faceDown")).toBe(false);
   });
 });

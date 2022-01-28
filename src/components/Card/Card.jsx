@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./Card.module.scss";
 import CardFront from "../CardFront";
 import CardBack from "../CardBack";
+import beers from "../../data/beers";
 
 const Card = (props) => {
   const [isFaceDown, setIsFaceDown] = useState(false);
