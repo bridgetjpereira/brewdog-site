@@ -59,14 +59,14 @@
     font-family: $font-family;
 
     &:hover {
-      color: rgb(9, 194, 194);
+      color: $primary-color;
     }
   }
 
   h3 {
     color: $primary-color;
     font-size: 0.9rem;
-    border: solid 2px rgb(9, 194, 194);
+    border: $primary-border;
     width: 200px;
     margin-left: 3.8em;
     padding: 0.3em;
@@ -74,8 +74,8 @@
     // border-radius: 30px;
   }
 
-  p {
-    // color: $secondary-text;
-    // margin-bottom: $base-spacing * 2;
-  }
+  // p {
+  //   // color: $secondary-text;
+  //   // margin-bottom: $base-spacing * 2;
+  // }
 }
