@@ -22,4 +22,14 @@ describe("Card tests", () => {
     const element = component.find(".beerCard");
     expect(element.hasClass("faceDown")).toBe(false);
   });
+
+  it("should toggle faceDown class when component is clicked", () => {
+    expect(component.find(".beerCard").hasClass("faceDown")).toBe(false);
+
+    component.find(".beerCard").simulate("click");
+    expect(component.find(".beerCard").hasClass("faceDown")).toBe(true);
+
+    component.find(".beerCard").simulate("click");
+    expect(component.find(".beerCard").hasClass("faceDown")).toBe(false);
+  });
 });
