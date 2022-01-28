@@ -22,4 +22,12 @@ describe("SearchBar tests", () => {
       .simulate("input", { target: { value: "User input" } });
     expect(mockFn).toHaveBeenCalled();
   });
+
+  it("should call the parent function with 'User Input'", () => {
+    component.find("span.fa").simulate("click");
+    component
+      .find("input")
+      .simulate("input", { target: { value: "User input" } });
+    expect(mockFn).toHaveBeenCalledWith("User input");
+  });
 });
