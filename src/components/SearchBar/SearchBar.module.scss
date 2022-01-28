@@ -1,26 +1,28 @@
+@import "../../variables.scss";
+
 .searchBar {
   list-style: none;
-  $tertiary-color: rgb(141, 140, 140);
+  // $tertiary-color: rgb(141, 140, 140);
   font-size: 1em;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: $font-family;
   padding-left: 10em;
   padding-top: 4em;
 }
 
 input {
   color: rgb(9, 194, 194);
-  border: solid 2px rgb(9, 194, 194);
+  border: $primary-color;
   border-radius: 8px;
   max-width: 200px;
 }
 
 .fa {
   font-size: 3em;
-  color: white;
+  color: $secondary-color;
   padding-right: 70px;
 }
 
 .searchTitle {
   padding-right: 1px;
-  color: white;
+  color: $secondary-color;
 }

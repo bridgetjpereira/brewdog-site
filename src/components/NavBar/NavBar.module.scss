@@ -3,28 +3,26 @@
 .nav {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: $font-family;
   float: left;
   max-width: 20%;
   margin-bottom: 10px;
-  border-radius: 10px;
-  backface-visibility: hidden;
+  border-radius: $border-rounding;
   margin: 20px;
 }
 
 h1 {
   // align-content: fle;
   font-size: 38px;
-  color: white;
+  color: $secondary-color;
   text-align: center;
   padding-bottom: 25px;
-  background-color: rgb(9, 194, 194);
+  background-color: $primary-color;
   padding-top: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.2);
-  border: solid 2px rgb(9, 194, 194);
-  border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  border-radius: $border-rounding;
+  box-shadow: $card-shadowing;
+  border: $primary-border;
+  font-family: $font-family;
   font-size: 35px;
 
   // -webkit-text-stroke: 1px white;
@@ -41,12 +39,13 @@ body {
   justify-content: flex-end;
   align-content: flex-end;
   height: 200px;
-  background-color: rgb(9, 194, 194);
+  background-color: $primary-color;
 }
 
 .FilterList {
   align-items: flex-end;
-  border: solid 2px rgb(9, 194, 194);
-  border-radius: 10px;
-  background-color: white;
+  border: $primary-border;
+  border-radius: $border-rounding;
+  color: $secondary-color;
+  background-color: $secondary-color;
 }

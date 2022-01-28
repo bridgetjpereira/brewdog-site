@@ -12,8 +12,8 @@
   // align-content: space-between;
   list-style: none;
   font-size: 1em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(9, 194, 194);
+  font-family: $font-family;
+  color: $primary-color;
   padding-right: 5px;
 
   //   // font-size: 2em;
@@ -25,8 +25,8 @@
 
 .filter {
   font-size: 1em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(9, 194, 194);
+  font-family: $font-family;
+  color: $primary-color;
   padding-left: 2.3em;
   // padding-right: 1.3em;
   // border: solid 2px rgb(9, 194, 194);
