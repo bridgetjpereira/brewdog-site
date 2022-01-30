@@ -12,8 +12,6 @@ import FilterList from "./components/FilterList";
 import library from "./data/fa-library";
 import Filters from "./data/filters";
 
-
-
 const App = () => {
   const [searchText, setSearchText] = useState("");
   const [filters, setFilters] = useState(Filters);
@@ -58,6 +56,5 @@ const App = () => {
     </>
   );
 };
-
 
 export default App;

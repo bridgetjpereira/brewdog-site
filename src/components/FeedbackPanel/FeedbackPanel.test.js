@@ -4,9 +4,13 @@ import { shallow } from "enzyme";
 
 describe("FeedbackPanel tests", () => {
   let component;
+  let testHeader;
+  let testText;
 
   beforeEach(() => {
-    component = shallow(<FeedbackPanel />);
+    testHeader = "No Matches";
+    testText = "None of our beers match that search";
+    component = shallow(<FeedbackPanel header={testHeader} text={testText} />);
   });
 
   it("should render", () => {
