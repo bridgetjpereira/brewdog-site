@@ -50,6 +50,7 @@ const App = () => {
             searchText={searchText}
             filters={filters}
             setFilters={updateFilters}
+            beers={beers}
           />
         </section>
       </div>

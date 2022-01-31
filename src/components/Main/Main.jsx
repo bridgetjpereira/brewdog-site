@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Main.module.scss";
 import CardList from "../CardList";
-import beers from "../../data/beers";
+// import beers from "../../data/beers";
 import FeedbackPanel from "../../components/FeedbackPanel";
 import filterList from "../../data/filters";
 import filters from "../../data/filters";
@@ -11,7 +11,7 @@ import filters from "../../data/filters";
 //1. Function to tell if checkbox has been clicked.
 
 const Main = (props) => {
-  const { searchText, filterItems, setFilters } = props;
+  const { searchText, filterItems, setFilters, beers } = props;
 
   // const [filters, setFilterItems] = useState(filterList);
 

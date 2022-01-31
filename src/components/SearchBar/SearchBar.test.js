@@ -45,7 +45,7 @@ describe("SearchBar tests", () => {
       .simulate("input", { target: { value: "User input" } });
     expect(mockFn).toHaveBeenCalledWith("User input");
   });
-  
+
   it("should not show the input field by default", () => {
     expect(component.find("input").length).toBe(0);
   });

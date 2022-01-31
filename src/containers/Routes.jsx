@@ -8,7 +8,7 @@ import filters from "../data/filters";
 // import beers from "./beers";
 
 const Routes = (props) => {
-  const { searchText, filters, setFilters } = props;
+  const { searchText, filters, setFilters, beers } = props;
   return (
     <Router>
       <Main
@@ -16,6 +16,7 @@ const Routes = (props) => {
         searchText={searchText}
         filterItems={filters}
         setFilters={setFilters}
+        beers={beers}
       />
       <NotFound default />
     </Router>
