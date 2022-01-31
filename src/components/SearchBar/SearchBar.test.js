@@ -6,15 +6,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 describe("SearchBar tests", () => {
   let component;
   let mockFn;
-  let setIsOpen;
+  let testPlaceholder = "Test placeholder";
+  let input;
+  let testSearchtext = "Test searchtext";
 
   beforeEach(() => {
     mockFn = jest.fn();
-    component = shallow(<SearchBar setSearchText={mockFn} setIsOpen={false} />);
+    component = shallow(
+      <SearchBar
+        placeholder={testPlaceholder}
+        setSearchText={mockFn}
+        searchText={testSearchtext}
+      />
+    );
   });
 
   it("should render", () => {
     expect(component).toBeTruthy();
+  });
+
+  it("should render the correct placeholder", () => {
+    component.find("span.fa").simulate("click");
+    expect(component.find("input").prop("placeholder")).toBe(testPlaceholder);
   });
 
   it("should call the parent function on input", () => {
@@ -32,22 +45,19 @@ describe("SearchBar tests", () => {
       .simulate("input", { target: { value: "User input" } });
     expect(mockFn).toHaveBeenCalledWith("User input");
   });
+  
+  it("should not show the input field by default", () => {
+    expect(component.find("input").length).toBe(0);
+  });
+
+  it("should toggle input rendering when FA icon is clicked", () => {
+    expect(component.find("input").length).toBe(0);
+    component.find("span.fa").simulate("click");
+    expect(component.find("input").length).toBe(1);
+    component.find("span.fa").simulate("click");
+    expect(component.find("input").length).toBe(0);
+  });
 });
 
-//Test the searchbar open and close functionality. When we click the icon,
-//the searchbar should appear or disappear.
-
-it("should not be open by default", () => {
-  const element = component.find(".fa");
-  expect(element.is("setIsOpen")).toBe(false);
-});
-
-it("should toggle faceDown class when component is clicked", () => {
-  expect(component.find(".fa").hasClass("input")).toBe(false);
-
-  component.find(".fa").simulate("click");
-  expect(component.find(".fa").hasClass("input")).toBe(true);
-
-  component.find(".fa").simulate("click");
-  expect(component.find(".fa").hasClass("input")).toBe(false);
-});
+// const element = component.find(".beerCard");
+//     expect(element.hasClass("faceDown")).toBe(false);

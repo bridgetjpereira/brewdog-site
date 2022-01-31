@@ -6,6 +6,8 @@ import beers from "../../data/beers";
 
 describe("CardList tests", () => {
   let component;
+  let input;
+  
 
   beforeEach(() => {
     component = shallow(<CardList beers={beers} />);

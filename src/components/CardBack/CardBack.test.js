@@ -1,16 +1,19 @@
-// import React from "react";
-// import CardList from "./CardList";
-// import { shallow } from "enzyme";
-// import beers from "../../data/beers";
+import React from "react";
+import CardBack from "./CardBack";
+import { shallow } from "enzyme";
+import beers from "../../data/beers";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-// describe("CardList tests", () => {
-//   let component;
+describe("CardBack tests", () => {
+  let component;
+//   let mockFn;
 
-//   beforeEach(() => {
-//     component = shallow(<CardList beers = {beers} />);
-//   });
+  beforeEach(() => {
+    // mockFn = jest.fn();
+    component = shallow(<CardBack beer={beers[0]}/>);
+  });
 
-//   it("should render", () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
+  it("should render", () => {
+    expect(component).toBeTruthy();
+  });
+});
