@@ -48,6 +48,10 @@ const Main = (props) => {
     // filterItems.map(checkFilters);
     const beerName = beer.name.toLowerCase();
     return beerName.includes(searchText.toLowerCase());
+
+    //data.filter(x => x.type.toLowerCase().startsWith('p'))
+    // let result = searchText.filter(x => x.type.toLowerCase().startsWith("x"))
+    // return result;
   });
 
   // const getHighAlcohol = beers.filter((beer) => {
