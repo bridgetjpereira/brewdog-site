@@ -36,6 +36,12 @@ const Checkbox = (props) => {
   };
   const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
 
+  // if (isClicked == true && filters.name= "High Alcohol") {
+  //  <CardList beers= {getHighAlcohol()}/>
+  // } else(if isClicked == true && filters.name= "Classic Range") {
+  //   getClassicRange();
+  // } else(if isClicked &&  filters)
+
   // console.log(filterItem);
   // console.log(checkboxIcon);
 

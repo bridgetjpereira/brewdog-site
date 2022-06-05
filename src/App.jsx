@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Router, Link } from "@reach/router";
 import styles from "./App.module.scss";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import Routes from "./containers/Routes";
@@ -13,12 +12,32 @@ const App = () => {
   const getBeers = () => {
     fetch("https://api.punkapi.com/v2/beers")
       .then((response) => response.json())
-      .then((response) => setBeers(response));
+      .then((data) => setBeers(data));
   };
 
   useEffect(() => {
     getBeers();
   }, []);
+
+  // const getHighAlcoholBeers = () => {
+  //   fetch("https://api.punkapi.com/v2/beersabv_gt_6")
+  //     .then((response) => response.json())
+  //     .then((data) => setBeers(data));
+  // };
+
+  // useEffect(() => {
+  //   getHighAlcoholBeers();
+  // }, []);
+
+  // const getClassicRange = () => {
+  //   fetch("https://api.punkapi.com/v2/beersbrewed_before01-2010")
+  //     .then((response) => response.json())
+  //     .then((data) => setBeers(data));
+  // };
+
+  // useEffect(() => {
+  //   getClassicRange();
+  // }, []);
 
   const updateFilters = useCallback(() => {
     setFilters(filters);
