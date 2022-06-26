@@ -2,7 +2,7 @@ $base-spacing: 5px;
 
 $font-family: Georgia, "Times New Roman", Times, serif;
 $secondary-font-family: helvetica;
-//helvetica
+
 $primary-color: rgb(9, 194, 194);
 $secondary-color: white;
 $tertiary-color: rgb(141, 140, 140);
@@ -11,18 +11,12 @@ $card-face-color: ghostwhite;
 $border-rounding: 10px;
 $primary-border: solid 2px $primary-color;
 
-// $primary-text: $secondary-color;
 $secondary-text: gray;
 $tertiary-text: rgb(199, 197, 197);
 
 $card-shadowing: 0 4px 7px rgba(0, 0, 0, 0.2);
-//0 4px 7px rgba(0, 0, 0, 0.27);
-// $card-hover-shadowing: 0 14px 28px rgba(0, 0, 0, 0.27),
-//   0 10px 10px rgba(0, 0, 0, 0.3);
 
 $hover-card-shadowing: 0 4px 7px rgb(9, 194, 194);
 
 $NavBar-height-mb: 60px;
 $NavBar-height: 75px;
-
-//Nice font
