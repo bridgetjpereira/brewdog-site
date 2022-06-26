@@ -2,9 +2,8 @@ import React from "react";
 import styles from "./NavBar.module.scss";
 import SearchBar from "../SearchBar";
 import FilterList from "../FilterList";
-
 import { Link } from "@reach/router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Navbar = (props) => {
   const { searchText, setSearchText, filters, setFilters } = props;
