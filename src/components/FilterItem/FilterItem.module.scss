@@ -8,10 +8,15 @@ ul {
   list-style: none;
   // font-size: 2em;
   font-family: $font-family;
-  font-size: 15px;
+  font-size: 1em;
   color: $primary-color;
 }
 
+// @media screen and (max-width: 425px) {
+//   ul {
+//     font-size: 10px;
+//   }
+// }
 // .filterItem {
 //   // display: flex;
 //   // flex-direction: row;

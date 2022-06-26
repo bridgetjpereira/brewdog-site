@@ -7,27 +7,6 @@ const Checkbox = (props) => {
   const { filter, setFilters, toggleClicked } = props;
   const [isClicked, setisClicked] = useState(false);
 
-  // const [isClicked, setisClicked] = useReducer((checked) => !checked, false);
-
-  // const [checkedState, setCheckedState] = useState(
-  //   new Array(filters.length).fill(false)
-  // );
-  // const CheckboxComponent = () => {
-  //   const [checkedState, setCheckedState] = useState(false);
-
-  //   return(
-  //     <div>
-  //       <input type="checkbox"
-  //       checked={checkedState}
-  //       onChange={()=> setCheckedState((x)=> !x)}
-  //      />
-  //     </div>
-  //   )
-  // };
-
-  // (filterItem.isClicked);
-  // console.log("Checked State" + checkedState);
-
   const handleClick = (e) => {
     e.stopPropagation();
     toggleClicked(filter); //Updates filters.js with changed state of checkbox
@@ -35,15 +14,6 @@ const Checkbox = (props) => {
     setFilters(filters);
   };
   const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
-
-  // if (isClicked == true && filters.name= "High Alcohol") {
-  //  <CardList beers= {getHighAlcohol()}/>
-  // } else(if isClicked == true && filters.name= "Classic Range") {
-  //   getClassicRange();
-  // } else(if isClicked &&  filters)
-
-  // console.log(filterItem);
-  // console.log(checkboxIcon);
 
   return (
     <>
@@ -59,16 +29,3 @@ const Checkbox = (props) => {
 };
 
 export default Checkbox;
-
-// const Checkbox = () => {
-//   const [checked, setChecked] = useState(false);
-
-//   const toggle = () => {
-//     setChecked((checked) => !checked);
-//   };
-//   return (
-//     <>
-//       <input type="checkbox" value={checked} onChange={toggle} />{" "}
-//       {checked ? "checked" : "not checked"}
-//     </>
-//   );
