@@ -10,7 +10,7 @@ const Routes = (props) => {
   return (
     <Router>
       <Main
-        path="/"
+        path="/brewdog-site"
         searchText={searchText}
         filterItems={filters}
         setFilters={setFilters}

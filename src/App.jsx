@@ -12,32 +12,12 @@ const App = () => {
   const getBeers = () => {
     fetch("https://api.punkapi.com/v2/beers")
       .then((response) => response.json())
-      .then((data) => setBeers(data));
+      .then((response) => setBeers(response));
   };
 
   useEffect(() => {
     getBeers();
   }, []);
-
-  // const getHighAlcoholBeers = () => {
-  //   fetch("https://api.punkapi.com/v2/beersabv_gt_6")
-  //     .then((response) => response.json())
-  //     .then((data) => setBeers(data));
-  // };
-
-  // useEffect(() => {
-  //   getHighAlcoholBeers();
-  // }, []);
-
-  // const getClassicRange = () => {
-  //   fetch("https://api.punkapi.com/v2/beersbrewed_before01-2010")
-  //     .then((response) => response.json())
-  //     .then((data) => setBeers(data));
-  // };
-
-  // useEffect(() => {
-  //   getClassicRange();
-  // }, []);
 
   const updateFilters = useCallback(() => {
     setFilters(filters);
@@ -71,3 +51,23 @@ const App = () => {
 };
 
 export default App;
+
+// const getHighAlcoholBeers = () => {
+//   fetch("https://api.punkapi.com/v2/beersabv_gt_6")
+//     .then((response) => response.json())
+//     .then((data) => setBeers(data));
+// };
+
+// useEffect(() => {
+//   getHighAlcoholBeers();
+// }, []);
+
+// const getClassicRange = () => {
+//   fetch("https://api.punkapi.com/v2/beersbrewed_before01-2010")
+//     .then((response) => response.json())
+//     .then((data) => setBeers(data));
+// };
+
+// useEffect(() => {
+//   getClassicRange();
+// }, []);
