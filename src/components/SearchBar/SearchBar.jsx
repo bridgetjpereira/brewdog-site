@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { shallow } from "enzyme";
-import beers from "../../data/beers";
-// import SearchBar from "./SearchBar";
+
 
 const SearchBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,24 +15,6 @@ const SearchBar = (props) => {
       onInput={(e) => setSearchText(e.target.value)}
     />
   ) : null;
-
-  // //added this
-  // const matchingBeers = beers.filter((beer) => {
-  //   const beerName = beer.name.toLowerCase();
-  //   return beerName.includes(searchText);
-  // });
-  // //
-
-  // const contentJSX = matchingBeers.length ? (
-  //   <CardList beers={matchingBeers} />
-  // ) : (
-  //   <FeedbackPanel
-  //     header="No Matches"
-  //     text="None of our beers match that search"
-  //   />
-  // );
-
-  // return <section className={styles.SearchBar}>{contentJSX} </section>;
 
   return (
     <div className={styles.searchBar}>

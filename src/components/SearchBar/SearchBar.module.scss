@@ -2,7 +2,6 @@
 
 .searchBar {
   list-style: none;
-  // $tertiary-color: rgb(141, 140, 140);
   font-size: 1em;
   font-family: $font-family;
   padding-left: 10em;
@@ -25,4 +24,17 @@ input {
 .searchTitle {
   padding-right: 1px;
   color: $secondary-color;
+}
+@media screen and (max-width: 425px) {
+  .searchBar {
+    font-size: 0.5em;
+    padding-left: 0em;
+    padding-top: 0em;
+  }
+  .fa {
+    font-size: 3em;
+    color: $secondary-color;
+    padding-right: 4px;
+    padding-top: 4em;
+  }
 }

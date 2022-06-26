@@ -1,13 +1,18 @@
 @import "../../variables.scss";
 
 .checkbox {
-  // color: $primary-color;
   color: rgb(9, 194, 194);
   font-size: 1.3rem;
   padding-right: 1em;
 
   &:hover {
-    // color:
     color: rgb(9, 194, 194);
+  }
+}
+@media screen and (max-width: 425px) {
+  .checkbox {
+    color: rgb(9, 194, 194);
+    font-size: 1rem;
+    padding-right: 0em;
   }
 }

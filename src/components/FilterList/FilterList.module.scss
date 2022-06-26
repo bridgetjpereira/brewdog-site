@@ -1,26 +1,12 @@
 @import "../../variables.scss";
-// <a href='https://www.freepik.com/vectors/background'>Background vector created by vector_corp - www.freepik.com</a>
 
-// .filterContainer {
-//   border: solid 2px blue;
-//   height: 500px;
-// }
 
 .FilterList {
-  // display: flex;
-  // flex-direction: column;
-  // align-content: space-between;
   list-style: none;
   font-size: 1em;
   font-family: $font-family;
   color: $primary-color;
   padding-right: 5px;
-
-  //   // font-size: 2em;
-  //   font-family: Georgia, "Times New Roman", Times, serif;
-  //   font-size: 15px;
-  //   padding-top: 50px;
-  //   color: rgb(9, 194, 194);
 }
 
 .filter {
@@ -28,7 +14,12 @@
   font-family: $secondary-font-family;
   color: $primary-color;
   padding-left: 2.3em;
-  // padding-right: 1.3em;
-  // border: solid 2px rgb(9, 194, 194);
-  // width: 100px;
+}
+@media screen and (max-width: 425px) {
+  .filter {
+    font-size: 1em;
+    font-family: $secondary-font-family;
+    color: $primary-color;
+    padding-left: 0.8em;
+  }
 }

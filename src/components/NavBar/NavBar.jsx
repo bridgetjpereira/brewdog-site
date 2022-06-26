@@ -17,7 +17,7 @@ const Navbar = (props) => {
     <div className={styles.nav}>
       <Link to="/"> </Link>
       <div className={styles.navTitle}>
-        <h1>Brewdog Beers</h1>
+        <h1 className={styles.title}>Brewdog Beers</h1>
         <section className={styles.FilterList}>
           <div className={styles.searchPanel}>
             <SearchBar

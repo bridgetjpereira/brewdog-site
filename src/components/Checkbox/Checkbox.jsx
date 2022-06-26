@@ -9,8 +9,8 @@ const Checkbox = (props) => {
 
   const handleClick = (e) => {
     e.stopPropagation();
-    toggleClicked(filter); //Updates filters.js with changed state of checkbox
-    setisClicked(!isClicked); //Sets state of filters in app.jsx to new filters.jsx
+    toggleClicked(filter); 
+    setisClicked(!isClicked); 
     setFilters(filters);
   };
   const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
