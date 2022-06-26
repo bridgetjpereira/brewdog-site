@@ -10,3 +10,15 @@ ul {
   color: $primary-color;
 }
 
+
+@media screen and (max-width: 425px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+    font-family: $font-family;
+    font-size: 0.6em;
+    color: $primary-color;
+  }
+}

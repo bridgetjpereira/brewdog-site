@@ -1,6 +1,5 @@
 @import "../../variables.scss";
 
-
 .FilterList {
   list-style: none;
   font-size: 1em;
@@ -15,11 +14,19 @@
   color: $primary-color;
   padding-left: 2.3em;
 }
+
 @media screen and (max-width: 425px) {
   .filter {
     font-size: 1em;
     font-family: $secondary-font-family;
     color: $primary-color;
-    padding-left: 0.8em;
+    padding-left: 0.3em;
+  }
+  .FilterList {
+    list-style: none;
+    font-size: 1em;
+    font-family: $font-family;
+    color: $primary-color;
+    padding-right: 0px;
   }
 }

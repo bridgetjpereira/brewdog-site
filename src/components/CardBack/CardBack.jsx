@@ -7,9 +7,9 @@ const CardBack = (props) => {
   const [isFav, setIsFav] = useState(beer.isFav);
 
   const shortenDescription = (description) =>
-    description.length < 300
+    description.length < 200
       ? description
-      : description.substring(0, 200) + "...";
+      : description.substring(0, 120) + "...";
 
   const handleClick = (e) => {
     e.stopPropagation();
