@@ -16,24 +16,30 @@
 }
 @media only screen and (min-width: 320px) and (max-width: 374px) {
   .filter {
-    font-size: 0.5em;
+    font-size: 1.2em;
     font-family: $secondary-font-family;
     color: $primary-color;
     padding-left: 0em;
   }
-}
-@media screen and (max-width: 425px) {
-  .filter {
-    font-size: 1em;
-    font-family: $secondary-font-family;
-    color: $primary-color;
-    padding-left: 0.3em;
-  }
   .FilterList {
     list-style: none;
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: $font-family;
     color: $primary-color;
-    padding-right: 0px;
   }
 }
+// @media screen and (max-width: 425px) {
+//   .filter {
+//     font-size: 1em;
+//     font-family: $secondary-font-family;
+//     color: $primary-color;
+//     padding-left: 0.3em;
+//   }
+//   .FilterList {
+//     list-style: none;
+//     font-size: 1em;
+//     font-family: $font-family;
+//     color: $primary-color;
+//     padding-right: 0px;
+//   }
+// }
