@@ -64,7 +64,72 @@
     font-family: $font-family;
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .cardFront {
+    width: 100%;
+    height: 100%;
+    padding-top: 1.4em;
 
+    img {
+      height: 10%;
+      width: 8%;
+      border-radius: 2px 2px 0 0;
+      padding: 1em;
+      border: solid 2px rgb(9, 194, 194);
+      border-radius: 10px;
+    }
+
+    .cardTitle {
+      padding-top: 0em;
+      font-size: 0.8em;
+      text-align: center;
+      color: rgb(9, 194, 194);
+      font-family: $font-family;
+    }
+
+    p {
+      font-size: 0.5em;
+      text-align: center;
+    }
+
+    .beerDetails {
+      height: 40%;
+      width: 100%;
+      padding: $base-spacing * 4;
+      border-top: none;
+      border-radius: 0 2px 2px 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: $base-spacing * 2;
+    }
+
+    h2 {
+      color: $primary-color;
+      font-size: 1rem;
+      margin-bottom: $base-spacing;
+      margin-left: 0em;
+      margin-right: 0em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      justify-content: center;
+      font-family: $font-family;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    h3 {
+      color: $primary-color;
+      font-size: 0.6rem;
+      border: $primary-border;
+      width: 100px;
+      margin-left: 2.5em;
+      padding: 0em;
+      font-family: $font-family;
+    }
+  }
+}
 @media screen and (max-width: 425px) {
   .cardFront {
     width: 100%;
