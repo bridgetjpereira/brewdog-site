@@ -42,12 +42,11 @@
     color: $primary-color;
     font-size: 1.3rem;
     margin-bottom: $base-spacing;
-    margin-left: 2em;
-    margin-right: 2em;
     overflow: hidden;
     text-overflow: ellipsis;
     justify-content: center;
     font-family: $font-family;
+    text-align: center;
 
     &:hover {
       color: $primary-color;
@@ -59,29 +58,29 @@
     font-size: 0.9rem;
     border: $primary-border;
     width: 200px;
-    margin-left: 3.8em;
-    padding: 0.3em;
+    text-align: center;
     font-family: $font-family;
+    margin-left: 3em;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 374px) {
   .cardFront {
     width: 100%;
     height: 100%;
-    padding-top: 1.4em;
+    padding-top: 0.8em;
 
     img {
-      height: 10%;
-      width: 8%;
+      height: 18%;
+      width: 10%;
       border-radius: 2px 2px 0 0;
-      padding: 1em;
+      padding: 0.4em;
       border: solid 2px rgb(9, 194, 194);
       border-radius: 10px;
     }
 
     .cardTitle {
       padding-top: 0em;
-      font-size: 0.8em;
+      font-size: 0.7em;
       text-align: center;
       color: rgb(9, 194, 194);
       font-family: $font-family;
@@ -94,7 +93,75 @@
 
     .beerDetails {
       height: 40%;
-      width: 100%;
+      width: 50%;
+      padding: $base-spacing * 4;
+      border-top: none;
+      border-radius: 0 2px 2px 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: $base-spacing * 2;
+    }
+
+    h2 {
+      color: $primary-color;
+      font-size: 0.7rem;
+      margin-bottom: $base-spacing;
+      margin-left: 0em;
+      margin-right: 0em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      font-family: $font-family;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    h3 {
+      color: $primary-color;
+      font-size: 0.6rem;
+      border: $primary-border;
+      width: 80px;
+      text-align: center;
+      padding: 0em;
+      font-family: $font-family;
+      margin-left: 4em;
+    }
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .cardFront {
+    width: 50%;
+    height: 50%;
+    padding-top: 0.8em;
+
+    img {
+      height: 50%;
+      width: 30%;
+      border-radius: 2px 2px 0 0;
+      padding: 0.3em;
+      border: solid 2px rgb(9, 194, 194);
+      border-radius: 10px;
+      margin-left: 4em;
+    }
+
+    .cardTitle {
+      padding-top: 0em;
+      font-size: 1em;
+      text-align: center;
+      color: rgb(9, 194, 194);
+      font-family: $font-family;
+    }
+
+    p {
+      font-size: 0.5em;
+      text-align: center;
+    }
+
+    .beerDetails {
+      height: 50%;
+      width: 80%;
       padding: $base-spacing * 4;
       border-top: none;
       border-radius: 0 2px 2px 0;
@@ -107,11 +174,79 @@
       color: $primary-color;
       font-size: 1rem;
       margin-bottom: $base-spacing;
-      margin-left: 0em;
+      margin-left: 4em;
       margin-right: 0em;
-      overflow: hidden;
+      text-align: center;
+      overflow: visible;
+      text-overflow: ellipsis;
+      font-family: $font-family;
+      text-align: center;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    h3 {
+      color: $primary-color;
+      font-size: 0.8rem;
+      border: $primary-border;
+      width: 110px;
+      text-align: center;
+      padding: 0em;
+      font-family: $font-family;
+      margin-left: 2.5em;
+    }
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 480px) {
+  .cardFront {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.8em;
+
+    img {
+      height: 42%;
+      width: 28%;
+      border-radius: 2px 2px 0 0;
+      padding: 0.5em;
+      border: solid 2px rgb(9, 194, 194);
+      border-radius: 10px;
+    }
+
+    .cardTitle {
+      padding-top: 0em;
+      font-size: 1em;
+      text-align: center;
+      color: rgb(9, 194, 194);
+      font-family: $font-family;
+    }
+
+    p {
+      font-size: 0.5em;
+      text-align: center;
+    }
+
+    .beerDetails {
+      height: 50%;
+      width: 70%;
+      padding: $base-spacing * 4;
+      border-top: none;
+      border-radius: 0 2px 2px 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: $base-spacing * 2;
+    }
+
+    h2 {
+      color: $primary-color;
+      font-size: 1rem;
+      margin-bottom: $base-spacing;
+      margin-right: 0em;
+      overflow: visible;
       text-overflow: ellipsis;
       justify-content: center;
+      align-items: center;
       font-family: $font-family;
 
       &:hover {
@@ -121,33 +256,33 @@
 
     h3 {
       color: $primary-color;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       border: $primary-border;
       width: 100px;
-      margin-left: 2.5em;
+      margin-left: 3.6em;
       padding: 0em;
       font-family: $font-family;
     }
   }
 }
-@media screen and (max-width: 425px) {
+@media only screen and (min-width: 481px) and (max-width: 768px) {
   .cardFront {
     width: 100%;
     height: 100%;
-    padding-top: 1.4em;
+    padding-top: 0.8em;
 
     img {
-      height: 22%;
-      width: 12%;
+      height: 50%;
+      width: 30%;
       border-radius: 2px 2px 0 0;
-      padding: 1em;
+      padding: 0.5em;
       border: solid 2px rgb(9, 194, 194);
       border-radius: 10px;
     }
 
     .cardTitle {
       padding-top: 0em;
-      font-size: 0.8em;
+      font-size: 1em;
       text-align: center;
       color: rgb(9, 194, 194);
       font-family: $font-family;
@@ -159,8 +294,8 @@
     }
 
     .beerDetails {
-      height: 40%;
-      width: 100%;
+      height: 50%;
+      width: 70%;
       padding: $base-spacing * 4;
       border-top: none;
       border-radius: 0 2px 2px 0;
@@ -171,13 +306,13 @@
 
     h2 {
       color: $primary-color;
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin-bottom: $base-spacing;
       margin-left: 0em;
       margin-right: 0em;
-      overflow: hidden;
+      overflow: visible;
       text-overflow: ellipsis;
-      justify-content: center;
+      align-items: center;
       font-family: $font-family;
 
       &:hover {
@@ -187,12 +322,12 @@
 
     h3 {
       color: $primary-color;
-      font-size: 0.6rem;
+      font-size: 0.9rem;
       border: $primary-border;
-      width: 100px;
-      margin-left: 2.5em;
+      width: 150px;
       padding: 0em;
       font-family: $font-family;
+      margin-left: 5em;
     }
   }
 }

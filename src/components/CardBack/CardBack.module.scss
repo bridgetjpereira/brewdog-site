@@ -63,70 +63,31 @@
     margin-bottom: $base-spacing * 2;
   }
 }
-
-@media screen and (max-width: 425px) {
-  .cardBack {
-    padding: $base-spacing * 4;
-    position: relative;
-
-    .description {
-      padding-top: 2em;
-      font-size: 1em;
-      max-width: 50%;
-      margin-bottom: $base-spacing * 3;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      padding-left: 0em;
-      padding-right: 0em;
-      margin-left: 0em;
-      font-family: $font-family;
-    }
-
-    .heart {
-      position: absolute;
-      top: $base-spacing * 4;
-      right: $base-spacing * 4;
-      color: $primary-color;
-      font-size: 1.3rem;
-
-      &:hover {
-        color: red;
-      }
-    }
-
-    h2,
-    h3 {
-      color: $primary-color;
-    }
-
-    h2 {
-      padding-top: 1em;
-      font-size: 1rem;
-      text-overflow: ellipsis;
-      max-width: 90%;
-      margin-bottom: $base-spacing * 2;
-      overflow: hidden;
-      margin-left: 0em;
-      margin-right: 0em;
-    }
-
-    h3 {
-      font-size: 0.8rem;
-      margin-bottom: $base-spacing;
-      border: $primary-border;
-      border-radius: 30px;
-      width: 80px;
-      margin-left: 1em;
-      background-color: $primary-color;
-      color: $secondary-color;
-    }
-
-    p {
-      text-align: justify;
-      color: $secondary-text;
-      margin-bottom: $base-spacing * 2;
-      font-size: 0.6em;
-    }
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .description {
+    padding-top: 1em;
+    font-size: 0.5em;
+    max-width: 90%;
+    margin-bottom: $base-spacing * 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 2em;
+    font-family: $font-family;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 424px) {}
+@media only screen and (min-width: 425px) and (max-width: 480px) {
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: $base-spacing;
+    border: $primary-border;
+    border-radius: 30px;
+    width: 100px;
+    margin-left: 4.5em;
+    background-color: $primary-color;
+    color: $secondary-color;
   }
 }
