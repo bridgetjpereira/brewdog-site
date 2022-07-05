@@ -4,9 +4,9 @@ import SearchBar from "../SearchBar";
 import FilterList from "../FilterList";
 import { Link } from "@reach/router";
 
-
 const Navbar = (props) => {
-  const { searchText, setSearchText, filters, setFilters } = props;
+  const { searchText, setSearchText, filters, setFilters, toggleHighABVBeers,toggleBrewedBefore2010 } =
+    props;
 
   const toggleClicked = (filter) => {
     filter.isClicked = !filter.isClicked;
@@ -30,7 +30,14 @@ const Navbar = (props) => {
             filters={filters}
             setFilters={setFilters}
             toggleClicked={toggleClicked}
+            toggleHighABVBeers={toggleHighABVBeers}
+            toggleBrewedBefore2010={toggleBrewedBefore2010}
           />
+          <div>
+            <Link to="/brewdog-site">Home </Link>
+            <br />
+            <Link to="/brewdog-site/favourites">Favourites</Link>
+          </div>
         </section>
       </div>
     </div>

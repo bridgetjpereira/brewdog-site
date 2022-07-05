@@ -4,13 +4,19 @@ import filters from "../../data/filters";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Checkbox = (props) => {
-  const { filter, setFilters, toggleClicked } = props;
+  const {
+    filter,
+    setFilters,
+    toggleClicked,
+    toggleHighABVBeers,
+    toggleBrewedBefore2010,
+  } = props;
   const [isClicked, setisClicked] = useState(false);
 
   const handleClick = (e) => {
     e.stopPropagation();
-    toggleClicked(filter); 
-    setisClicked(!isClicked); 
+    toggleClicked(filter);
+    setisClicked(!isClicked);
     setFilters(filters);
   };
   const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
@@ -18,11 +24,8 @@ const Checkbox = (props) => {
   return (
     <>
       <span className={styles.checkbox}>
-        <FontAwesomeIcon
-          icon={checkboxIcon}
-          value={isClicked}
-          onClick={handleClick}
-        />
+        <input type="checkbox" onClick={toggleHighABVBeers} />
+        <input type="checkbox" onClick={toggleBrewedBefore2010} />
       </span>
     </>
   );

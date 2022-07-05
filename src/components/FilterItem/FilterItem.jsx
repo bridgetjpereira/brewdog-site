@@ -3,9 +3,13 @@ import styles from "./FilterItem.module.scss";
 import Checkbox from "../Checkbox/Checkbox";
 
 const FilterItem = (props) => {
-  const { filter, setFilters, toggleClicked } = props;
-
-  
+  const {
+    filter,
+    setFilters,
+    toggleClicked,
+    toggleHighABVBeers,
+    toggleBrewedBefore2010,
+  } = props;
 
   return (
     <>
@@ -16,6 +20,8 @@ const FilterItem = (props) => {
             filter={filter}
             setFilters={setFilters}
             toggleClicked={toggleClicked}
+            toggleHighABVBeers={toggleHighABVBeers}
+            toggleBrewedBefore2010={toggleBrewedBefore2010}
           />
           {filter.name} {filter.value}
         </ul>

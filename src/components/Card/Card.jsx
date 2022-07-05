@@ -7,23 +7,21 @@ import beers from "../../data/beers";
 const Card = (props) => {
   const [isFaceDown, setIsFaceDown] = useState(false);
 
-  const { beer, toggleFav } = props;
+  const { beer, addFav } = props;
   const flipStyles = isFaceDown ? styles.faceDown : "";
 
   return (
-  
-      <section
-        className={`${styles.beerCard} ${flipStyles}`}
-        onClick={() => setIsFaceDown(!isFaceDown)}
-      >
-        <div className={styles.front}>
-          <CardFront beer={beer} />
-        </div>
-        <div className={styles.back}>
-          <CardBack beer={beer} toggleFav={toggleFav} />
-        </div>
-      </section>
-  
+    <section
+      className={`${styles.beerCard} ${flipStyles}`}
+      onClick={() => setIsFaceDown(!isFaceDown)}
+    >
+      <div className={styles.front}>
+        <CardFront beer={beer} />
+      </div>
+      <div className={styles.back}>
+        <CardBack beer={beer} addFav={addFav} />
+      </div>
+    </section>
   );
 };
 

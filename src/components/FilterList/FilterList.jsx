@@ -3,7 +3,13 @@ import styles from "./FilterList.module.scss";
 import FilterItem from "../FilterItem";
 
 const FilterList = (props) => {
-  const { filters, setFilters, toggleClicked } = props;
+  const {
+    filters,
+    setFilters,
+    toggleClicked,
+    toggleHighABVBeers,
+    toggleBrewedBefore2010,
+  } = props;
 
   const getFilterItemJsx = (filter) => (
     <div className={styles.FilterList} key={filter.id}>
@@ -11,6 +17,8 @@ const FilterList = (props) => {
         filter={filter}
         setFilters={setFilters}
         toggleClicked={toggleClicked}
+        toggleHighABVBeers={toggleHighABVBeers}
+        toggleBrewedBefore2010={toggleBrewedBefore2010}
       />
     </div>
   );

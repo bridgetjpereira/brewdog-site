@@ -6,7 +6,9 @@ import filterList from "../../data/filters";
 import filters from "../../data/filters";
 
 const Main = (props) => {
-  const { searchText, filterItems, setFilters, beers } = props;
+  const { searchText, filterItems, setFilters, beers, fav, setFav, addFav } =
+    props;
+
   const toggleClicked = (filterItem) => {
     filterItem.isClicked = !filterItem.isClicked;
   };
@@ -17,7 +19,11 @@ const Main = (props) => {
   });
 
   const contentJSX = matchingBeers.length ? (
-    <CardList beers={matchingBeers} toggleClicked={toggleClicked} />
+    <CardList
+      beers={matchingBeers}
+      toggleClicked={toggleClicked}
+      addFav={addFav}
+    />
   ) : (
     <FeedbackPanel
       header="No Matches"
