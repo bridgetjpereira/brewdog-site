@@ -35,7 +35,7 @@ const Checkbox = (props) => {
   return (
     <>
       <span className={styles.checkbox}>
-        <input type="checkbox" onClick={toggle} />
+        <input type="checkbox" onClick={toggle}   />
         {/* <input type="checkbox" onClick={toggleBrewedBefore2010} /> */}
       </span>
     </>

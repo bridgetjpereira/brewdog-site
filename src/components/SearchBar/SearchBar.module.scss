@@ -11,14 +11,15 @@
 input {
   color: rgb(9, 194, 194);
   border: $primary-color;
-  border-radius: 8px;
-  max-width: 200px;
+  border-radius: 10px;
+  max-width:110px;
 }
 
 .fa {
-  font-size: 3em;
+  font-size: 2em;
   color: $secondary-color;
-  padding-right: 70px;
+  display: flex;
+  flex-direction: row;
 }
 
 .searchTitle {
