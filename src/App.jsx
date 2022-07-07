@@ -25,7 +25,7 @@ const App = () => {
 
   const fetchHighAcidity = () => {
     const newHighAcidity = highAcidity
-      ? [beers.filter((beer) => beer.ph < 4)]
+      ? beers.filter((beer) => beer.ph < 4)
       : beers;
     console.log(newHighAcidity);
     console.log(highAcidity);

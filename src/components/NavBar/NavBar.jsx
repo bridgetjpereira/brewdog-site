@@ -41,10 +41,12 @@ const Navbar = (props) => {
             toggleBrewedBefore2010={toggleBrewedBefore2010}
             toggleHighAcidityBeers={toggleHighAcidityBeers}
           />
-          <div>
-            <Link to="/brewdog-site">Home </Link>
-            <br />
-            <Link to="/brewdog-site/favourites">Favourites</Link>
+          <div className={styles.homeLink}>
+            <Link to="/brewdog-site"style={{ textDecoration: 'none' }}>Home </Link>
+          </div>
+          <br />
+          <div className={styles.favouritesLink}>
+            <Link to="/brewdog-site/favourites"style={{ textDecoration: 'none' }}>Favourites</Link>
           </div>
         </section>
       </div>
