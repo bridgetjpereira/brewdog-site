@@ -9,6 +9,7 @@ const FilterList = (props) => {
     toggleClicked,
     toggleHighABVBeers,
     toggleBrewedBefore2010,
+    toggleHighAcidityBeers,
   } = props;
 
   const getFilterItemJsx = (filter) => (
@@ -19,6 +20,7 @@ const FilterList = (props) => {
         toggleClicked={toggleClicked}
         toggleHighABVBeers={toggleHighABVBeers}
         toggleBrewedBefore2010={toggleBrewedBefore2010}
+        toggleHighAcidityBeers={toggleHighAcidityBeers}
       />
     </div>
   );

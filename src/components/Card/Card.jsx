@@ -7,7 +7,7 @@ import beers from "../../data/beers";
 const Card = (props) => {
   const [isFaceDown, setIsFaceDown] = useState(false);
 
-  const { beer, addFav } = props;
+  const { beer, addFav, fav, removeFav } = props;
   const flipStyles = isFaceDown ? styles.faceDown : "";
 
   return (
@@ -19,7 +19,7 @@ const Card = (props) => {
         <CardFront beer={beer} />
       </div>
       <div className={styles.back}>
-        <CardBack beer={beer} addFav={addFav} />
+        <CardBack beer={beer} addFav={addFav} fav={fav} removeFav={removeFav} />
       </div>
     </section>
   );

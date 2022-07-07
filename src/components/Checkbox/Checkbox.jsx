@@ -10,6 +10,7 @@ const Checkbox = (props) => {
     toggleClicked,
     toggleHighABVBeers,
     toggleBrewedBefore2010,
+    toggleHighAcidityBeers
   } = props;
   const [isClicked, setisClicked] = useState(false);
 
@@ -21,11 +22,21 @@ const Checkbox = (props) => {
   };
   const checkboxIcon = isClicked ? ["fas", "check-square"] : ["far", "square"];
 
+  let toggle = toggleHighABVBeers;
+
+  if (filter.id == 1) {
+    toggle = toggleHighABVBeers;
+  } else if (filter.id == 2) {
+    toggle = toggleBrewedBefore2010;
+  } else {
+    toggle = toggleHighAcidityBeers;
+  }
+
   return (
     <>
       <span className={styles.checkbox}>
-        <input type="checkbox" onClick={toggleHighABVBeers} />
-        <input type="checkbox" onClick={toggleBrewedBefore2010} />
+        <input type="checkbox" onClick={toggle} />
+        {/* <input type="checkbox" onClick={toggleBrewedBefore2010} /> */}
       </span>
     </>
   );

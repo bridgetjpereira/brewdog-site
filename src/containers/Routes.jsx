@@ -2,36 +2,30 @@ import React from "react";
 import { Router } from "@reach/router";
 import Main from "../components/Main";
 import NotFound from "../components/NotFound";
-import filters from "../data/filters";
 import Favourites from "../components/Favourites/Favourites";
 
 const Routes = (props) => {
-  const {
-    searchText,
-    filters,
-    setFilters,
-    beers,
-    fav,
-    setFav,
-    addFav,
-    toggleHighABVBeers,
-  } = props;
+  const { searchText, filters, beers, fav, setFav, addFav, removeFav } = props;
 
-  console.log(fav);
   return (
     <Router>
       <Main
         path="/brewdog-site"
         searchText={searchText}
         filterItems={filters}
-        setFilters={setFilters}
         beers={beers}
         fav={fav}
         setFav={setFav}
         addFav={addFav}
-        toggleHighABVBeers={toggleHighABVBeers}
+        removeFav={removeFav}
       />
-      <Favourites path="/brewdog-site/favourites" fav={fav} setFav={setFav} />
+      <Favourites
+        path="/brewdog-site/favourites"
+        fav={fav}
+        setFav={setFav}
+        addFav={addFav}
+        removeFav={removeFav}
+      />
       <NotFound default />
     </Router>
   );

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Favourites from "../Favourites/Favourites";
 
 const CardBack = (props) => {
-  const { beer, addFav, fav } = props;
+  const { beer, addFav, fav, removeFav } = props;
   const [isFav, setIsFav] = useState(false);
 
   const shortenDescription = (description) =>
@@ -12,19 +12,23 @@ const CardBack = (props) => {
       ? description
       : description.substring(0, 120) + "...";
 
+  const checkFavourite = fav.find((favObject) => favObject.id === beer.id)
+    ? true
+    : false;
+
   const handleClick = (e) => {
     e.stopPropagation();
-    addFav(beer.id);
+    if (!checkFavourite) {
+      addFav(beer.id);
+    } else {
+      removeFav(beer.id);
+    }
     setIsFav(!isFav);
   };
 
-  // const checkFavourite = (fav) => {
-  //   beer.id === fav.id ? setIsFav(!isFav) : "";
-  //   //add fav as props down to this level
-  //   //
-  //   //cycle through fav array and check if beer.id matches each fav.id
-  //   //if it does match run setIsFav(!isFav)
-  // };
+  useEffect(() => {
+    setIsFav(checkFavourite);
+  }, [checkFavourite]);
 
   const { name, description } = props.beer;
   const heartIcon = isFav ? ["fas", "heart"] : ["far", "heart"];

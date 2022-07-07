@@ -6,8 +6,16 @@ import filterList from "../../data/filters";
 import filters from "../../data/filters";
 
 const Main = (props) => {
-  const { searchText, filterItems, setFilters, beers, fav, setFav, addFav } =
-    props;
+  const {
+    searchText,
+    filterItems,
+    setFilters,
+    beers,
+    fav,
+    setFav,
+    addFav,
+    removeFav,
+  } = props;
 
   const toggleClicked = (filterItem) => {
     filterItem.isClicked = !filterItem.isClicked;
@@ -23,6 +31,8 @@ const Main = (props) => {
       beers={matchingBeers}
       toggleClicked={toggleClicked}
       addFav={addFav}
+      fav={fav}
+      removeFav={removeFav}
     />
   ) : (
     <FeedbackPanel

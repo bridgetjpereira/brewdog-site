@@ -5,8 +5,15 @@ import FilterList from "../FilterList";
 import { Link } from "@reach/router";
 
 const Navbar = (props) => {
-  const { searchText, setSearchText, filters, setFilters, toggleHighABVBeers,toggleBrewedBefore2010 } =
-    props;
+  const {
+    searchText,
+    setSearchText,
+    filters,
+    setFilters,
+    toggleHighABVBeers,
+    toggleBrewedBefore2010,
+    toggleHighAcidityBeers,
+  } = props;
 
   const toggleClicked = (filter) => {
     filter.isClicked = !filter.isClicked;
@@ -32,6 +39,7 @@ const Navbar = (props) => {
             toggleClicked={toggleClicked}
             toggleHighABVBeers={toggleHighABVBeers}
             toggleBrewedBefore2010={toggleBrewedBefore2010}
+            toggleHighAcidityBeers={toggleHighAcidityBeers}
           />
           <div>
             <Link to="/brewdog-site">Home </Link>
