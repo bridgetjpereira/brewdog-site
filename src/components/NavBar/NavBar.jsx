@@ -32,7 +32,25 @@ const Navbar = (props) => {
               setSearchText={setSearchText}
             />
           </div>
-
+          <div className={styles.links}>
+          <div className={styles.homeLink}>
+            <Link
+              to="/brewdog-site"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Home
+            </Link>
+          </div>
+          <br />
+          <div className={styles.favouritesLink}>
+            <Link
+              to="/brewdog-site/favourites"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Favourites
+            </Link>
+          </div>
+          </div>
           <FilterList
             filters={filters}
             setFilters={setFilters}
@@ -41,13 +59,6 @@ const Navbar = (props) => {
             toggleBrewedBefore2010={toggleBrewedBefore2010}
             toggleHighAcidityBeers={toggleHighAcidityBeers}
           />
-          <div className={styles.homeLink}>
-            <Link to="/brewdog-site"style={{ textDecoration: 'none' }}>Home </Link>
-          </div>
-          <br />
-          <div className={styles.favouritesLink}>
-            <Link to="/brewdog-site/favourites"style={{ textDecoration: 'none' }}>Favourites</Link>
-          </div>
         </section>
       </div>
     </div>

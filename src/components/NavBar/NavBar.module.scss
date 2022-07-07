@@ -31,8 +31,15 @@
   font-family: $font-family;
   text-decoration: none;
   background-color: rgb(9, 194, 194); 
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
 
+.links{
+  background-color: rgb(9, 194, 194); 
+  display: flex;
+  flex-direction: row;
+}
 // .favouritesLink {
 //   font-size: 1em;
 //   color: $primary-color;
