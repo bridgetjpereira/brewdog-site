@@ -21,15 +21,7 @@ const App = () => {
   const removeFav = (id) => {
     const newFavList = fav.filter((beer) => beer.id !== id);
     setFav(newFavList);
-  };
-
-  const fetchHighAcidity = () => {
-    const newHighAcidity = highAcidity
-      ? beers.filter((beer) => beer.ph < 4)
-      : beers;
-    console.log(newHighAcidity);
-    console.log(highAcidity);
-    setBeers(newHighAcidity);
+    getBeers();
   };
 
   const toggleHighAcidityBeers = () => {
@@ -60,6 +52,17 @@ const App = () => {
   } else if (brewedBefore2010 && !highABVBeers) {
     params = `${fetchBrewedBefore2010}`;
   }
+
+  const fetchHighAcidity = () => {
+    const newHighAcidity = highAcidity
+      ? setBeers(beers.filter((beer) => beer.ph < 4))
+      : fetch(`https://api.punkapi.com/v2/beers${params}`)
+          .then((response) => response.json())
+          .then((response) => setBeers(response));
+    console.log(newHighAcidity);
+    console.log(highAcidity);
+    // setBeers(newHighAcidity);
+  }; 
 
   const getBeers = () => {
     fetch(`https://api.punkapi.com/v2/beers${params}`)
