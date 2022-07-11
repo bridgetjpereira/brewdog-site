@@ -25,18 +25,21 @@ const Navbar = (props) => {
       <div className={styles.navTitle}>
         <h1 className={styles.title}>Brewdog Beers</h1>
         <section className={styles.FilterList}>
+        
+          
           <div className={styles.searchPanel}>
+          <div className={styles.search}>
             <SearchBar
               placeholder="Search for beers..."
               searchText={searchText}
               setSearchText={setSearchText}
             />
           </div>
-          <div className={styles.links}>
+          <br />
           <div className={styles.homeLink}>
             <Link
               to="/brewdog-site"
-              style={{ textDecoration: "none", color: "white" }}
+              style={{ textDecoration: "none", color: "white"}}
             >
               Home
             </Link>

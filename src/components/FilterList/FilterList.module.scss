@@ -5,7 +5,7 @@
   font-size: 1em;
   font-family: $font-family;
   color: $primary-color;
-  padding-right: 5px;
+  padding-right: 4px;
 }
 
 .filter {
@@ -14,6 +14,7 @@
   color: $primary-color;
   padding-left: 2.3em;
 }
+
 @media only screen and (min-width: 320px) and (max-width: 374px) {
   .filter {
     font-size: 0.8em;
