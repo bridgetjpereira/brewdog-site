@@ -189,13 +189,12 @@
 
     h3 {
       color: $primary-color;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       border: $primary-border;
-      width: 110px;
+      width: 150px;
       text-align: center;
-      padding: 0em;
       font-family: $font-family;
-      margin-left: 2.5em;
+      margin-left: 1em;
     }
   }
 }
@@ -255,7 +254,7 @@
     }
 
     h3 {
-      color: $primary-color;
+      color: $secondary-color;
       font-size: 0.8rem;
       border: $primary-border;
       width: 100px;

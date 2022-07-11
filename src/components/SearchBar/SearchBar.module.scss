@@ -8,8 +8,6 @@
   padding-top: 4em;
 }
 
-
-
 text {
   color: rgb(9, 194, 194);
   border: $primary-color;
@@ -37,31 +35,92 @@ text {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 374px) {
-.searchInput {
-  width: 8em;
-  border-radius: 2em;
-  border: 2px solid white;
-  font-size: 10px;
+  .searchInput {
+    width: 8em;
+    border-radius: 2em;
+    border: 2px solid white;
+    font-size: 10px;
+    margin-left: 0.4em;
+  }
+
+  .searchBar {
+    list-style: none;
+    font-size: 1em;
+    font-family: $font-family;
+    padding-left: 0em;
+    padding-top: 2em;
+  }
+
+  .fa {
+    font-size: 1.5em;
+    color: $secondary-color;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .searchTitle {
+    padding-right: 1px;
+    color: $secondary-color;
+  }
 }
 
-.searchBar {
-  list-style: none;
-  font-size: 1em;
-  font-family: $font-family;
-  padding-left: 0em;
-  padding-top: 2em;
-}
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .searchInput {
+    width: 9em;
+    border-radius: 2em;
+    border: 2px solid white;
+    font-size: 10px;
+    margin-left: 0.4em;
+  }
 
+  .searchBar {
+    list-style: none;
+    font-size: 1em;
+    font-family: $font-family;
+    padding-left: 0em;
+    padding-top: 2em;
+  }
 
-.fa {
-  font-size: 1.5em;
-  color: $secondary-color;
-  display: flex;
-  flex-direction: row;
-}
+  .fa {
+    font-size: 1.5em;
+    color: $secondary-color;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.3em;
+  }
 
-.searchTitle {
-  padding-right: 1px;
-  color: $secondary-color;
+  .searchTitle {
+    padding-right: 1px;
+    color: $secondary-color;
+  }
 }
+@media only screen and (min-width: 425px) and (max-width: 480px) {
+  .searchInput {
+    width: 9em;
+    border-radius: 2em;
+    border: 2px solid white;
+    font-size: 10px;
+    margin-left: 0.4em;
+  }
+
+  .searchBar {
+    list-style: none;
+    font-size: 1em;
+    font-family: $font-family;
+    padding-left: 0em;
+    padding-top: 2em;
+  }
+
+  .fa {
+    font-size: 1.5em;
+    color: $secondary-color;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.3em;
+  }
+
+  .searchTitle {
+    padding-right: 1px;
+    color: $secondary-color;
+  }
 }
