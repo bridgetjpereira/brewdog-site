@@ -22,10 +22,10 @@
     font-family: $font-family;
   }
 
-  p {
-    font-size: 1em;
-    text-align: center;
-  }
+  // p {
+  //   font-size: 1em;
+  //   text-align: center;
+  // }
 
   .beerDetails {
     height: 40%;
@@ -104,7 +104,7 @@
 
     .cardfrontName {
       color: $primary-color;
-      font-size: 1.1rem;
+      font-size: 0.9em;
       margin-bottom: 1px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -119,9 +119,9 @@
 
     .tagline {
       color: $primary-color;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       border: $primary-border;
-      width: 110px;
+      width: 100px;
       text-align: center;
       font-family: $font-family;
       margin-left: 2em;

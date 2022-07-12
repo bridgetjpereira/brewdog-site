@@ -98,23 +98,23 @@
     color: $primary-color;
   }
   .beername {
-    padding-top: 3em;
-    font-size: 1.3rem;
+    padding-top: 1em;
+    font-size: 1rem;
     text-overflow: ellipsis;
     max-width: 90%;
     margin-bottom: $base-spacing * 2;
     overflow: hidden;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0em;
+    margin-right: 0em;
   }
 
   .beerdescription {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: $base-spacing;
     border: $primary-border;
     border-radius: 30px;
     width: 100px;
-    margin-left: 4.5em;
+    margin-left: 0.5em;
     background-color: $primary-color;
     color: $secondary-color;
   }
@@ -123,6 +123,7 @@
     text-align: justify;
     color: $secondary-text;
     margin-bottom: $base-spacing * 2;
+    font-size: 0.7em;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 424px) {
