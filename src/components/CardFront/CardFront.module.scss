@@ -4,6 +4,270 @@
   width: 100%;
   height: 100%;
   padding-top: 2em;
+}
+
+img {
+  height: 35%;
+  width: 18%;
+  border-radius: 2px 2px 0 0;
+  padding: 1.5em;
+  border: solid 2px rgb(9, 194, 194);
+  border-radius: 10px;
+}
+
+.cardTitle {
+  padding-top: 0.5em;
+  font-size: 1em;
+  text-align: center;
+  color: rgb(9, 194, 194);
+  font-family: $font-family;
+}
+
+// p {
+//   font-size: 1em;
+//   text-align: center;
+// }
+
+.beerDetails {
+  height: 40%;
+  width: 100%;
+  padding: $base-spacing * 4;
+  border-top: none;
+  border-radius: 0 2px 2px 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: $base-spacing * 2;
+}
+
+.cardfrontName {
+  color: $primary-color;
+  font-size: 1.3rem;
+  margin-bottom: $base-spacing;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: center;
+  font-family: $font-family;
+  text-align: center;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.beertagline {
+  color: $primary-color;
+  font-size: 0.9rem;
+  border: $primary-border;
+  width: 200px;
+  text-align: center;
+  font-family: $font-family;
+  margin-left: 3em;
+}
+
+@media only screen and (min-width: 319px) and (max-width: 374px) {
+  .cardFront {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.8em;
+  }
+
+  img {
+    height: 25%;
+    width: 18%;
+    border-radius: 2px 2px 0 0;
+    padding: 0.4em;
+    border: solid 2px rgb(9, 194, 194);
+    border-radius: 10px;
+  }
+
+  .cardTitle {
+    padding-top: 0em;
+    font-size: 0.9em;
+    text-align: center;
+    color: rgb(9, 194, 194);
+    font-family: $font-family;
+  }
+
+  p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .beerDetails {
+    height: 40%;
+    width: 100%;
+    padding: $base-spacing * 4;
+    border-top: none;
+    border-radius: 0 2px 2px 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: $base-spacing * 2;
+  }
+
+  .cardfrontName {
+    color: $primary-color;
+    font-size: 0.9em;
+    margin-bottom: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: center;
+    font-family: $font-family;
+    text-align: center;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .beertagline {
+    color: $primary-color;
+    font-size: 0.6em;
+    border: $primary-border;
+    width: 100px;
+    text-align: center;
+    font-family: $font-family;
+    margin-left: 2.2em;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .cardFront {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.8em;
+  }
+
+  img {
+    height: 35%;
+    width: 18%;
+    border-radius: 2px 2px 0 0;
+    padding: 0.4em;
+    border: solid 2px rgb(9, 194, 194);
+    border-radius: 10px;
+  }
+
+  .cardTitle {
+    padding-top: 0em;
+    font-size: 0.9em;
+    text-align: center;
+    color: rgb(9, 194, 194);
+    font-family: $font-family;
+  }
+
+  p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .beerDetails {
+    height: 40%;
+    width: 100%;
+    padding: $base-spacing * 4;
+    border-top: none;
+    border-radius: 0 2px 2px 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: $base-spacing * 2;
+  }
+
+  .cardfrontName {
+    color: $primary-color;
+    font-size: 0.9em;
+    margin-bottom: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: center;
+    font-family: $font-family;
+    text-align: center;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .beertagline {
+    color: $primary-color;
+    font-size: 0.8rem;
+    border: $primary-border;
+    width: 100px;
+    text-align: center;
+    font-family: $font-family;
+    margin-left: 3em;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 480px) {
+  .cardFront {
+    width: 100%;
+    height: 100%;
+    padding-top: 1em;
+  }
+
+  img {
+    height: 35%;
+    width: 18%;
+    border-radius: 2px 2px 0 0;
+    padding: 1em;
+    border: solid 2px rgb(9, 194, 194);
+    border-radius: 10px;
+  }
+
+  .cardTitle {
+    padding-top: 0em;
+    font-size: 1em;
+    text-align: center;
+    color: rgb(9, 194, 194);
+    font-family: $font-family;
+  }
+
+  p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .beerDetails {
+    height: 40%;
+    width: 100%;
+    padding: $base-spacing * 4;
+    border-top: none;
+    border-radius: 0 2px 2px 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: $base-spacing * 2;
+  }
+
+  .cardfrontName {
+    color: $primary-color;
+    font-size: 1em;
+    margin-bottom: $base-spacing;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    justify-content: center;
+    font-family: $font-family;
+    text-align: center;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .beertagline {
+    color: $primary-color;
+    font-size: 0.7em;
+    border: $primary-border;
+    width: 100px;
+    text-align: center;
+    font-family: $font-family;
+    margin-left: 3em;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .cardFront {
+    width: 100%;
+    height: 100%;
+    padding-top: 2em;
+  }
 
   img {
     height: 35%;
@@ -22,10 +286,10 @@
     font-family: $font-family;
   }
 
-  // p {
-  //   font-size: 1em;
-  //   text-align: center;
-  // }
+  p {
+    font-size: 1em;
+    text-align: center;
+  }
 
   .beerDetails {
     height: 40%;
@@ -53,7 +317,7 @@
     }
   }
 
-  .tagline {
+  .beertagline {
     color: $primary-color;
     font-size: 0.9rem;
     border: $primary-border;
@@ -61,200 +325,5 @@
     text-align: center;
     font-family: $font-family;
     margin-left: 3em;
-  }
-}
-@media only screen and (min-width: 319px) and (max-width: 374px) {
-  .cardFront {
-    width: 100%;
-    height: 100%;
-    padding-top: 0.8em;
-
-    img {
-      height: 35%;
-      width: 18%;
-      border-radius: 2px 2px 0 0;
-      padding: 0.4em;
-      border: solid 2px rgb(9, 194, 194);
-      border-radius: 10px;
-    }
-
-    .cardTitle {
-      padding-top: 0em;
-      font-size: 0.9em;
-      text-align: center;
-      color: rgb(9, 194, 194);
-      font-family: $font-family;
-    }
-
-    p {
-      font-size: 1em;
-      text-align: center;
-    }
-
-    .beerDetails {
-      height: 40%;
-      width: 100%;
-      padding: $base-spacing * 4;
-      border-top: none;
-      border-radius: 0 2px 2px 0;
-      display: flex;
-      flex-direction: column;
-      padding-top: $base-spacing * 2;
-    }
-
-    .cardfrontName {
-      color: $primary-color;
-      font-size: 0.9em;
-      margin-bottom: 1px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      justify-content: center;
-      font-family: $font-family;
-      text-align: center;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-
-    .tagline {
-      color: $primary-color;
-      font-size: 0.8rem;
-      border: $primary-border;
-      width: 100px;
-      text-align: center;
-      font-family: $font-family;
-      margin-left: 2em;
-    }
-  }
-  @media only screen and (min-width: 425px) and (max-width: 480px) {
-    .cardFront {
-      width: 100%;
-      height: 100%;
-      padding-top: 2em;
-
-      img {
-        height: 35%;
-        width: 18%;
-        border-radius: 2px 2px 0 0;
-        padding: 1.5em;
-        border: solid 2px rgb(9, 194, 194);
-        border-radius: 10px;
-      }
-
-      .cardTitle {
-        padding-top: 0.5em;
-        font-size: 1em;
-        text-align: center;
-        color: rgb(9, 194, 194);
-        font-family: $font-family;
-      }
-
-      p {
-        font-size: 1em;
-        text-align: center;
-      }
-
-      .beerDetails {
-        height: 40%;
-        width: 100%;
-        padding: $base-spacing * 4;
-        border-top: none;
-        border-radius: 0 2px 2px 0;
-        display: flex;
-        flex-direction: column;
-        padding-top: $base-spacing * 2;
-      }
-
-      .cardfrontName {
-        color: $primary-color;
-        font-size: 1.3rem;
-        margin-bottom: $base-spacing;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        justify-content: center;
-        font-family: $font-family;
-        text-align: center;
-
-        &:hover {
-          color: $primary-color;
-        }
-      }
-
-      .tagline {
-        color: $primary-color;
-        font-size: 0.9rem;
-        border: $primary-border;
-        width: 200px;
-        text-align: center;
-        font-family: $font-family;
-        margin-left: 3em;
-      }
-    }
-  }
-  @media only screen and (min-width: 481px) and (max-width: 768px) {
-    .cardFront {
-      width: 100%;
-      height: 100%;
-      padding-top: 2em;
-
-      img {
-        height: 35%;
-        width: 18%;
-        border-radius: 2px 2px 0 0;
-        padding: 1.5em;
-        border: solid 2px rgb(9, 194, 194);
-        border-radius: 10px;
-      }
-
-      .cardTitle {
-        padding-top: 0.5em;
-        font-size: 1em;
-        text-align: center;
-        color: rgb(9, 194, 194);
-        font-family: $font-family;
-      }
-
-      p {
-        font-size: 1em;
-        text-align: center;
-      }
-
-      .beerDetails {
-        height: 40%;
-        width: 100%;
-        padding: $base-spacing * 4;
-        border-top: none;
-        border-radius: 0 2px 2px 0;
-        display: flex;
-        flex-direction: column;
-        padding-top: $base-spacing * 2;
-      }
-
-      .cardfrontName {
-        color: $primary-color;
-        font-size: 1.3rem;
-        margin-bottom: $base-spacing;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        justify-content: center;
-        font-family: $font-family;
-        text-align: center;
-
-        &:hover {
-          color: $primary-color;
-        }
-      }
-
-      .tagline {
-        color: $primary-color;
-        font-size: 0.9rem;
-        border: $primary-border;
-        width: 200px;
-        text-align: center;
-        font-family: $font-family;
-        margin-left: 3em;
-      }
-    }
   }
 }

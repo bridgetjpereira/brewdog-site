@@ -109,12 +109,12 @@
   }
 
   .beerdescription {
-    font-size: 1rem;
+    font-size: 0.8em;
     margin-bottom: $base-spacing;
     border: $primary-border;
     border-radius: 30px;
-    width: 100px;
-    margin-left: 0.5em;
+    width: 80px;
+    margin-left: 0.7em;
     background-color: $primary-color;
     color: $secondary-color;
   }
@@ -126,6 +126,7 @@
     font-size: 0.7em;
   }
 }
+
 @media only screen and (min-width: 375px) and (max-width: 424px) {
   .cardBack {
     padding: $base-spacing * 4;
@@ -162,8 +163,8 @@
     color: $primary-color;
   }
   .beername {
-    padding-top: 3em;
-    font-size: 1.3rem;
+    padding-top: 1em;
+    font-size: 1.1rem;
     text-overflow: ellipsis;
     max-width: 90%;
     margin-bottom: $base-spacing * 2;
@@ -173,12 +174,12 @@
   }
 
   .beerdescription {
-    font-size: 1.1rem;
+    font-size: 0.8em;
     margin-bottom: $base-spacing;
     border: $primary-border;
     border-radius: 30px;
     width: 100px;
-    margin-left: 4.5em;
+    margin-left: 1em;
     background-color: $primary-color;
     color: $secondary-color;
   }
@@ -187,6 +188,7 @@
     text-align: justify;
     color: $secondary-text;
     margin-bottom: $base-spacing * 2;
+    font-size: 0.75em;
   }
 }
 
@@ -226,7 +228,7 @@
     color: $primary-color;
   }
   .beername {
-    padding-top: 3em;
+    padding-top: 0.4em;
     font-size: 1.3rem;
     text-overflow: ellipsis;
     max-width: 90%;
@@ -237,12 +239,12 @@
   }
 
   .beerdescription {
-    font-size: 1.1rem;
+    font-size: 1em;
     margin-bottom: $base-spacing;
     border: $primary-border;
     border-radius: 30px;
-    width: 100px;
-    margin-left: 4.5em;
+    width: 90px;
+    margin-left: 1em;
     background-color: $primary-color;
     color: $secondary-color;
   }
@@ -251,5 +253,6 @@
     text-align: justify;
     color: $secondary-text;
     margin-bottom: $base-spacing * 2;
+    font-size: 0.8em;
   }
 }

@@ -41,7 +41,7 @@
     backface-visibility: hidden;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 374px) {
+@media only screen and (min-width: 319px) and (max-width: 374px) {
   .beerCard {
     text-align: center;
     background-color: transparent;
@@ -52,8 +52,8 @@
     z-index: 0;
     border-radius: 10px;
     box-shadow: $card-shadowing;
-    width: 155px;
-    height: 230px;
+    width: 150px;
+    height: 225px;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 424px) {
@@ -82,7 +82,7 @@
     z-index: 0;
     border-radius: 10px;
     box-shadow: $card-shadowing;
-    width: 200px;
-    height: 300px;
+    width: 170px;
+    height: 260px;
   }
 }

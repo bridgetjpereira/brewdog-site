@@ -14,7 +14,7 @@ const CardFront = (props) => {
       </div>
 
       <div className={styles.tagLine}>
-        <h3 className={styles.tagline}>{tagline}</h3>
+        <h3 className={styles.beertagline}>{tagline}</h3>
       </div>
     </div>
   );
