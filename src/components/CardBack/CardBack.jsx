@@ -41,9 +41,9 @@ const CardBack = (props) => {
       {/* <p>
         <span className={styles.description}>{description}</span>
       </p> */}
-      <h2>{name}</h2>
-      <h3>Description</h3>
-      <p>{shortenDescription(description)}</p>
+      <h2 className={styles.beername}>{name}</h2>
+      <h3 className={styles.beerdescription}>Description</h3>
+      <p className={styles.descriptiontext}>{shortenDescription(description)}</p>
     </section>
   );
 };

@@ -10,11 +10,11 @@ const CardFront = (props) => {
     <div className={styles.cardFront}>
       <img src={image_url} alt="Best Beer" />
       <div className={styles.cardTitle}>
-        <h2>{name}</h2>
+        <h2 className={styles.cardfrontName}>{name}</h2>
       </div>
 
       <div className={styles.tagLine}>
-        <h3>{tagline}</h3>
+        <h3 className={styles.tagline}>{tagline}</h3>
       </div>
     </div>
   );

@@ -3,7 +3,70 @@
 .cardBack {
   padding: $base-spacing * 4;
   position: relative;
+}
+.description {
+  padding-top: 2em;
+  font-size: 1em;
+  max-width: 90%;
+  margin-bottom: $base-spacing * 3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 2em;
+  font-family: $font-family;
+}
 
+.heart {
+  position: absolute;
+  top: $base-spacing * 4;
+  right: $base-spacing * 4;
+  color: $primary-color;
+  font-size: 1.3rem;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.beername,
+.beerdescription {
+  color: $primary-color;
+}
+.beername {
+  padding-top: 3em;
+  font-size: 1.3rem;
+  text-overflow: ellipsis;
+  max-width: 90%;
+  margin-bottom: $base-spacing * 2;
+  overflow: hidden;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.beerdescription {
+  font-size: 1.1rem;
+  margin-bottom: $base-spacing;
+  border: $primary-border;
+  border-radius: 30px;
+  width: 100px;
+  margin-left: 4.5em;
+  background-color: $primary-color;
+  color: $secondary-color;
+}
+
+.descriptiontext {
+  text-align: justify;
+  color: $secondary-text;
+  margin-bottom: $base-spacing * 2;
+}
+
+@media only screen and (min-width: 319px) and (max-width: 374px) {
+  .cardBack {
+    padding: $base-spacing * 4;
+    position: relative;
+  }
   .description {
     padding-top: 2em;
     font-size: 1em;
@@ -30,12 +93,11 @@
     }
   }
 
-  h2,
-  h3 {
+  .beername,
+  .beerdescription {
     color: $primary-color;
   }
-
-  h2 {
+  .beername {
     padding-top: 3em;
     font-size: 1.3rem;
     text-overflow: ellipsis;
@@ -46,7 +108,7 @@
     margin-right: 1em;
   }
 
-  h3 {
+  .beerdescription {
     font-size: 1.1rem;
     margin-bottom: $base-spacing;
     border: $primary-border;
@@ -57,16 +119,20 @@
     color: $secondary-color;
   }
 
-  p {
+  .descriptiontext {
     text-align: justify;
     color: $secondary-text;
     margin-bottom: $base-spacing * 2;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 374px) {
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+  .cardBack {
+    padding: $base-spacing * 4;
+    position: relative;
+  }
   .description {
-    padding-top: 1em;
-    font-size: 0.5em;
+    padding-top: 2em;
+    font-size: 1em;
     max-width: 90%;
     margin-bottom: $base-spacing * 3;
     white-space: nowrap;
@@ -77,11 +143,35 @@
     margin-left: 2em;
     font-family: $font-family;
   }
-}
-@media only screen and (min-width: 375px) and (max-width: 424px) {
-}
-@media only screen and (min-width: 425px) and (max-width: 480px) {
-  h3 {
+
+  .heart {
+    position: absolute;
+    top: $base-spacing * 4;
+    right: $base-spacing * 4;
+    color: $primary-color;
+    font-size: 1.3rem;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  .beername,
+  .beerdescription {
+    color: $primary-color;
+  }
+  .beername {
+    padding-top: 3em;
+    font-size: 1.3rem;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    margin-bottom: $base-spacing * 2;
+    overflow: hidden;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .beerdescription {
     font-size: 1.1rem;
     margin-bottom: $base-spacing;
     border: $primary-border;
@@ -90,5 +180,75 @@
     margin-left: 4.5em;
     background-color: $primary-color;
     color: $secondary-color;
+  }
+
+  .descriptiontext {
+    text-align: justify;
+    color: $secondary-text;
+    margin-bottom: $base-spacing * 2;
+  }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 480px) {
+  .cardBack {
+    padding: $base-spacing * 4;
+    position: relative;
+  }
+  .description {
+    padding-top: 2em;
+    font-size: 1em;
+    max-width: 90%;
+    margin-bottom: $base-spacing * 3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 2em;
+    font-family: $font-family;
+  }
+
+  .heart {
+    position: absolute;
+    top: $base-spacing * 4;
+    right: $base-spacing * 4;
+    color: $primary-color;
+    font-size: 1.3rem;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  .beername,
+  .beerdescription {
+    color: $primary-color;
+  }
+  .beername {
+    padding-top: 3em;
+    font-size: 1.3rem;
+    text-overflow: ellipsis;
+    max-width: 90%;
+    margin-bottom: $base-spacing * 2;
+    overflow: hidden;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .beerdescription {
+    font-size: 1.1rem;
+    margin-bottom: $base-spacing;
+    border: $primary-border;
+    border-radius: 30px;
+    width: 100px;
+    margin-left: 4.5em;
+    background-color: $primary-color;
+    color: $secondary-color;
+  }
+
+  .descriptiontext {
+    text-align: justify;
+    color: $secondary-text;
+    margin-bottom: $base-spacing * 2;
   }
 }
